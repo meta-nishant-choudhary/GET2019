@@ -5,12 +5,29 @@ import java.lang.Math;
 
 public class HexCalc {
 	
-	public static String hexadecimalNumber = "0123456789ABCDEF";
+	public static final String hexadecimalNumber = "0123456789ABCDEF";
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		
-		System.out.println("Enter first number: ");
-		String num1 = (input.nextLine()).toUpperCase();
+		String num1;
+		int flag = 0;
+		do{
+			System.out.println("Enter first number: ");
+			num1 = (input.nextLine()).toUpperCase();
+			for (int loop = 0; loop < num1.length(); loop++){
+				try{
+					char c = num1.charAt(loop);
+					System.out.println("c "+c);
+					int t = hexadecimalNumber.indexOf(c);
+					System.out.println("t:"+t);
+					flag = 1;
+				}
+				catch (Exception e){
+					System.out.println("Wrong input.");
+					flag = 0;
+					break;
+				}
+			}
+		} while(flag != 1);
 		
 		System.out.println("Enter second number: ");
 		String num2 = (input.nextLine()).toUpperCase();
@@ -69,7 +86,7 @@ public class HexCalc {
 			else if (choice == 0){
 				break;
 			}
-		}while(choice!=0);
+		} while(choice != 0);
 		System.out.println("exit");
 	}	
 
@@ -83,15 +100,21 @@ public static String add(String num1, String num2){
 public static String subtract(String num1, String num2){
 	long res1 = hexaToDecimal(num1); 
 	long res2 = hexaToDecimal(num2);
-	long result = Math.abs(res1 - res2);
+	long result = res1 - res2;
 	return decimalToHexa(result);
 }
 
 public static String divide(String num1, String num2){
+	long result;
 	long res1 = hexaToDecimal(num1); 
 	long res2 = hexaToDecimal(num2);
-	long result = res1 / res2;
-	return decimalToHexa(result);
+	try {
+		result = res1 / res2;
+		return decimalToHexa(result);
+	}
+	catch (ArithmeticException e){
+		return "Number should not be divided by zero";	
+	}
 }
 
 public static String multiplication(String num1, String num2){
@@ -110,7 +133,6 @@ public static long hexaToDecimal(String num){
 		value = hexadecimalNumber.indexOf(ch);										
 		result += value * pow(16,quotient);			
 		quotient++;		
-		
 	}
 	return result;
 }
@@ -121,13 +143,16 @@ public static String decimalToHexa(long decimal){
 	long remainder;
 	long hexaLimit = 16;
 	
+	if(decimal < 0){
+		hexa += "-";
+	}
+	decimal = Math.abs(decimal);
 	do{	
 		remainder = decimal % hexaLimit;
 		char ch = hexadecimalNumber.charAt((int)remainder);
-		decimal = decimal/hexaLimit;
-		hexa = Character.toString(ch)+hexa;
-	}while(decimal>0);
-	
+		decimal = decimal / hexaLimit;
+		hexa += Character.toString(ch);
+	} while(decimal > 0);	
 	return hexa;
 }
 
@@ -152,46 +177,22 @@ public static long pow(long base, long power){
 
 //check that the numbers are equal or not
 public static boolean equalsTo(String num1,String num2){
-	if(num1.length() == num2.length()){
-		for(int loop = 0; loop < num1.length(); loop++){
-			if(hexadecimalNumber.indexOf(num1.charAt(loop)) == hexadecimalNumber.indexOf(num2.charAt(loop))){
-				continue;
-			}
-			else{
-				return false;
-			}
-		}
+	if (hexaToDecimal(num1) == hexaToDecimal(num2)){
+		return true;
 	}
-	else{
+	else {
 		return false;
 	}
-	return true;
 }
 
 //to check which number is greater
 public static boolean greater(String num1, String num2){
-	if(num1.length() == num2.length()){
-		if(hexaToDecimal(num1) > hexaToDecimal(num2)){
-			return true;
-		}
-
-		/*for(int loop = 0; loop < num1.length(); loop++){
-			if(hexadecimalNumber.indexOf(num1.charAt(loop)) > hexadecimalNumber.indexOf(num2.charAt(loop))){
-				return true;
-			}
-			else if(hexadecimalNumber.indexOf(num1.charAt(loop)) == hexadecimalNumber.indexOf(num2.charAt(loop))){
-				continue;
-			}
-			else{
-				return false;
-			}
-		}
-		return*/ 
-	}
-	else if(num1.length() > num2.length()){
+	if(hexaToDecimal(num1) > hexaToDecimal(num2)){
 		return true;
 	}
-	return false;
+	else {
+		return false;
+	}
 }
 
 //to check th smaller number
@@ -199,13 +200,8 @@ public static boolean smaller(String num1, String num2){
 	if(hexaToDecimal(num1) < hexaToDecimal(num2)){
 		return true;
 	}
-	
-	else if(num1.length() < num2.length()){
-		return true;
+	else {
+		return false;
 	}
-	return false;
 }
-
-
-
 }
