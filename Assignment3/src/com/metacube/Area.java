@@ -16,24 +16,24 @@ public class Area {
 				Integer base = input.nextInt();
 				System.out.println("Enter Height : ");
 				Integer height = input.nextInt();
-				System.out.println("Area of Triangle : "+String.format("%.2f", area.Triangle(base, height)));
+				System.out.println("Area of Triangle : " + String.format("%.2f", Triangle(base, height)));
 			}
 			else if(choice == 2){
 				System.out.println("Enter Radius : ");
 				Integer radius = input.nextInt();
-				System.out.println("Area of Circle : "+String.format("%.2f", area.Circle(radius)));
+				System.out.println("Area of Circle : " + String.format("%.2f", Circle(radius)));
 			}
 			else if(choice == 3){
 				System.out.println("Enter Length : ");
 				Integer length = input.nextInt();
 				System.out.println("Enter Breadth : ");
 				Integer breadth = input.nextInt();
-				System.out.println("Area of Rectangle : "+String.format("%.2f", area.Rectangle(length, breadth)));
+				System.out.println("Area of Rectangle : " + String.format("%.2f", Rectangle(length, breadth)));
 			}
 			else if(choice == 4){
 				System.out.println("Enter Side : ");
 				Integer side = input.nextInt();
-				System.out.println("Area of Square : "+String.format("%.2f", area.Square(side)));
+				System.out.println("Area of Square : " + String.format("%.2f", Square(side)));
 			}
 			else if(choice == 0){
 				break;
@@ -45,40 +45,41 @@ public class Area {
 	}
 	/**
 	 * area of triangle
-	 * @param base
-	 * @param height
-	 * @return (base*height)/2
+	 * @param base Type: double
+	 * @param height Type: double
+	 * @return (base*height)/2 Type: double
 	 */
-	public double Triangle(double base, double height) {
-		return (base*height)/2;
+	public static double Triangle(double base, double height) {
+		return (base * height) / 2;
 	}
 	
 	/**
 	 * AREA OF CIRCLE
-	 * @param radius
-	 * @return area = 3.14*radius*radius
+	 * @param radius Type: double
+	 * @return area = 3.14*radius * radius Type: double
 	 */
-	public double Circle(double radius) {
-		return 3.14*(radius*radius);
+	public static double Circle(double radius) {
+		double areaOFCircle = Math.PI*(radius*radius);
+		return areaOFCircle;
 	}
 	
 	/**
 	 * area of rectangle
-	 * @param length
-	 * @param breadth
-	 * @return area = length * breadth
+	 * @param length Type: double
+	 * @param breadth Type: double
+	 * @return area = length * breadth Type: double
 	 */
-	public double Rectangle(double length, double breadth) {
-		return length*breadth;
+	public static double Rectangle(double length, double breadth) {
+		return length * breadth;
 	}
 	
 	/**
 	 * area of square
-	 * @param side
-	 * @return area = side * side
+	 * @param side Type: double
+	 * @return area = side * side Type: double
 	 */
-	public double Square(double side) {
-		return side*side;
+	public static double Square(double side) {
+		return side * side;
 	}
 }
 
