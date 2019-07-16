@@ -21,7 +21,7 @@ class StrOperation{
 			choice = input.nextInt();
 			
 			input.nextLine();
-			switch(choice){
+			switch (choice) {
 				case 1: 
 					System.out.println("Enter the first sring: ");
 					String strFirst = input.nextLine();
@@ -53,7 +53,7 @@ class StrOperation{
 				case 0: default:
 					break;
 				}
-			} while( choice != 0 ) ;
+			} while ( choice != 0 ) ;
 		System.out.println("Exit");
 	}
 	
@@ -73,11 +73,9 @@ class StrOperation{
 					return 0;
 				}
 			}
+			return 1;
 		}
-		else {
-			return 0;
-		}
-	return 1;
+		return 0;
 	}
 	
 	/**
@@ -92,6 +90,7 @@ class StrOperation{
 		}
 		return revStr;
 	}
+	
 	/**
 	 * to change uppercase letter in lower and vice-versa
 	 * @param String str
@@ -101,19 +100,24 @@ class StrOperation{
 		String changedStr = "";
 		int ascii = 32;
 		char character;
+		int capitalStart = 64, capitalEnd = 91;
+		int smallStart = 96, smallEnd = 122;
 		for(int index = 0; index < str.length(); index++){
 			int charNum = str.charAt(index);
-			if (charNum>64 && charNum<90){ 
+			if (charNum > capitalStart && charNum < capitalEnd){ 
 				character = (char)(charNum + ascii); 
-				changedStr += Character.toString(character);
+			}
+			else if (charNum > smallStart && charNum < smallEnd){
+				character = (char)(charNum - ascii);  
 			}
 			else {
-				character = (char)(charNum - ascii); 
-				changedStr += Character.toString(character); 
+				character = (char)(charNum);
 			}
+			changedStr += Character.toString(character);
 		}
 		return changedStr;
 	}
+	
 	/**
 	 * to find the longest word in given String
 	 * @param String str 
@@ -123,11 +127,8 @@ class StrOperation{
 		int maxLength = 0;
 		String longestWord = "";
 		String []str1 = str.split(" ");
-		for(String word:str1){
-			maxLength = word.length();
-			break;
-		}
-
+		maxLength = str1[0].length();
+		
 		for(String word:str1){
 			if(word.length() >= maxLength){
 				longestWord = "";
