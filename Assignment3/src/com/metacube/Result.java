@@ -77,10 +77,6 @@ public class Result {
 				studentGrade.add(obj1);
 			}
 		}
-		for(Marksheet mrk:studentGrade){
-			System.out.println(mrk);
-			System.out.println(mrk.getGrades());
-		}
 		Marksheet result = new Marksheet();
 		System.out.println("Avg: " + String.format("%.2f", result.average(studentGrade)));
 		System.out.println("MAX: " + result.maxGrade(studentGrade));
