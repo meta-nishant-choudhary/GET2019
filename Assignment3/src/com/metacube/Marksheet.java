@@ -65,9 +65,13 @@ public class Marksheet {
 	 */
 	double average(List<Marksheet> studentGrade){
 		double totalMarks = 0;
-		
-		for(Marksheet obj : studentGrade){
-			totalMarks += obj.grades;
+		try {
+			for(Marksheet obj : studentGrade){
+				totalMarks += obj.grades;
+			}
+		}
+		catch (Exception e) {
+			System.out.println("Arithmatic error: wrong input in average");
 		}
 		return totalMarks/studentGrade.size();
 	}
@@ -79,10 +83,15 @@ public class Marksheet {
 	 */
 	int maxGrade(List<Marksheet> studentGrade){
 		int max = 0;
-		for (Marksheet obj : studentGrade){
-			if(obj.grades > max){
-				max = obj.grades;
+		try{
+			for (Marksheet obj : studentGrade){
+				if(obj.grades > max){
+					max = obj.grades;
+				}
 			}
+		}
+		catch (Exception e) {
+			System.out.println("Arithmatic error: wrong input in maxGrade");
 		}
 		return max;
 	}
@@ -97,12 +106,17 @@ public class Marksheet {
 		int min = obj1.grades;
 		System.out.println("minimum initialize"+min);
 		System.out.println("grade: " + min);
-		for (Marksheet obj2 : studentGrade){
-			System.out.println("hello");
-			if(obj2.grades < min){
-				min = obj2.grades;
-				System.out.println("mingrade: " + min);
+		try {
+			for (Marksheet obj2 : studentGrade){
+				System.out.println("hello");
+				if(obj2.grades < min){
+					min = obj2.grades;
+					System.out.println("mingrade: " + min);
+				}
 			}
+		}
+		catch (Exception e) {
+			System.out.println("Arithmatic error: wrong input in minGrade");
 		}
 		return min;
 	}
@@ -114,10 +128,15 @@ public class Marksheet {
 	 */
 	double studentsPassed(List<Marksheet> studentGrade){
 		double passed = 0;
-		for(Marksheet mark : studentGrade){
-			if(mark.grades >= 40){
-				passed += 1;
+		try {
+			for(Marksheet mark : studentGrade){
+				if(mark.grades >= 40){
+					passed += 1;
+				}
 			}
+		}
+		catch (Exception e) {
+			System.out.println("Arithmatic error: wrong input studentsPassed");
 		}
 		return 100*(passed/studentGrade.size());
 	}
