@@ -20,7 +20,6 @@ public class HexCalc {
 			}
 			catch (Exception e){
 				System.out.println("invalid input. Try Again...");
-				flag = 0;
 			}
 		} while (flag == 0);
 		
@@ -33,7 +32,6 @@ public class HexCalc {
 			}
 			catch (Exception e){
 				System.out.println("invalid input. Try Again...");
-				flag = 0;
 			}
 		} while (flag == 0);
 
