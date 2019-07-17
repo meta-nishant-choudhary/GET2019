@@ -94,7 +94,7 @@ public class Area {
 	/**
 	 * AREA OF CIRCLE
 	 * @param radius Type: double
-	 * @return area = 3.14*radius * radius Type: double
+	 * @return area Type: double
 	 */
 	public static double Circle(double radius) {
 		return Math.PI * (radius * radius);
@@ -104,7 +104,7 @@ public class Area {
 	 * area of rectangle
 	 * @param length Type: double
 	 * @param breadth Type: double
-	 * @return area = length * breadth Type: double
+	 * @return area Type: double
 	 */
 	public static double Rectangle(double length, double breadth) {
 		return length * breadth;
@@ -113,7 +113,7 @@ public class Area {
 	/**
 	 * area of square
 	 * @param side Type: double
-	 * @return area = side * side Type: double
+	 * @return area Type: double
 	 */
 	public static double Square(double side) {
 		return side * side;
