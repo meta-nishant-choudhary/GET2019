@@ -6,34 +6,72 @@ public class Area {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		Integer choice = null;
-		do{
+		int base = 0, height = 0, radius = 0,length = 0, breadth = 0, side = 0;
+		do{ 
 			System.out.println("Find Area :");
 			System.out.println("1. Triangle\n2. Circle\n3. Rectangle\n4. Square");
 			choice=input.nextInt();
 			Area area = new Area();
 			if(choice == 1){
-				System.out.println("Enter Base : ");
-				Integer base = input.nextInt();
-				System.out.println("Enter Height : ");
-				Integer height = input.nextInt();
+				int flag = 0;
+				do {
+					try {
+						System.out.println("Enter Base : ");
+						base = input.nextInt();
+						System.out.println("Enter Height : ");
+						height = input.nextInt();
+						flag = 1;
+					}
+					catch (Exception e) {
+						System.out.println("Wrong input");
+						input.nextLine();
+					}
+				} while (flag == 0 );
 				System.out.println("Area of Triangle : " + String.format("%.2f", Triangle(base, height)));
 			}
 			else if(choice == 2){
-				System.out.println("Enter Radius : ");
-				Integer radius = input.nextInt();
-				System.out.println("Area of Circle : " + String.format("%.2f", Circle(radius)));
+				int flag = 0;
+				do {
+					try {
+						System.out.println("Enter Radius : ");
+						radius = input.nextInt();
+						flag = 1;
+					}
+					catch (Exception e) {
+						System.out.println("Area of Circle : " + String.format("%.2f", Circle(radius)));
+						input.nextLine();
+					}
+				} while (flag == 0);
 			}
 			else if(choice == 3){
-				System.out.println("Enter Length : ");
-				Integer length = input.nextInt();
-				System.out.println("Enter Breadth : ");
-				Integer breadth = input.nextInt();
-				System.out.println("Area of Rectangle : " + String.format("%.2f", Rectangle(length, breadth)));
+				int flag = 0;
+				do {
+					try {
+						System.out.println("Enter Length : ");
+						length = input.nextInt();
+						System.out.println("Enter Breadth : ");
+						breadth = input.nextInt();
+						flag = 1;
+					}
+					catch (Exception e) {
+						System.out.println("Area of Rectangle : " + String.format("%.2f", Rectangle(length, breadth)));
+						input.nextLine();
+					}
+				} while (flag == 0);
 			}
 			else if(choice == 4){
-				System.out.println("Enter Side : ");
-				Integer side = input.nextInt();
-				System.out.println("Area of Square : " + String.format("%.2f", Square(side)));
+				int flag = 0;
+				do {
+					try {
+						System.out.println("Enter Side : ");
+						side = input.nextInt();
+						flag = 1;
+					}
+					catch (Exception e) {
+						System.out.println("Area of Square : " + String.format("%.2f", Square(side)));
+						input.nextLine();
+					}
+				} while ( flag == 0 );
 			}
 			else if(choice == 0){
 				break;
@@ -59,8 +97,7 @@ public class Area {
 	 * @return area = 3.14*radius * radius Type: double
 	 */
 	public static double Circle(double radius) {
-		double areaOFCircle = Math.PI*(radius*radius);
-		return areaOFCircle;
+		return Math.PI * (radius * radius);
 	}
 	
 	/**
