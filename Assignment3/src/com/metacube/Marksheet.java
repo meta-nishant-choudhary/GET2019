@@ -3,17 +3,7 @@ package com.metacube;
 import java.util.*;
 
 public class Marksheet {
-	public Integer id;
 	public Integer grades;
-	
-		
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public Integer getGrades() {
 		return grades;
@@ -24,18 +14,18 @@ public class Marksheet {
 	}
 
 	/**
-	 * to check average
-	 * @param studentGrade
-	 * @return average
+	 * to check average 
+	 * @param studentGrade type: Marksheet
+	 * @return average type: double
 	 */
-	public  double average(List<Marksheet> studentGrade){
+	public static double average(List<Marksheet> studentGrade){
 		double totalMarks = 0;
 		double passed = 0;
 		for(Marksheet obj : studentGrade){
 			totalMarks += obj.grades;
 		}
 		try {
-			passed = totalMarks/studentGrade.size();
+			passed = totalMarks / studentGrade.size();
 		}
 		catch (ArithmeticException e) {
 			System.out.println("cannot divide by zero");
@@ -45,10 +35,10 @@ public class Marksheet {
 
 	/**
 	 * to find the maximum of grades
-	 * @param studentGrade
-	 * @return max
+	 * @param studentGrade type: Marksheet
+	 * @return max type: integer
 	 */
-	public int maxGrade(List<Marksheet> studentGrade){
+	public static int maxGrade(List<Marksheet> studentGrade){
 		int max = 0;
 
 		for (Marksheet obj : studentGrade){
@@ -61,10 +51,10 @@ public class Marksheet {
 	
 	/**
 	 * to find minimum grade
-	 * @param studentGrade
-	 * @return min
+	 * @param studentGrade type: Marksheet
+	 * @return min type: integer
 	 */
-	public int minGrade(List<Marksheet> studentGrade){
+	public static int minGrade(List<Marksheet> studentGrade){
 		Marksheet obj1 = studentGrade.get(0);
 		int min = obj1.grades;
 		
@@ -78,17 +68,24 @@ public class Marksheet {
 	
 	/**
 	 * to check how much students are passed
-	 * @param studentGrade
-	 * @return
+	 * @param studentGrade type: Marksheet
+	 * @return pass type: double
 	 */
-	public double studentsPassed(List<Marksheet> studentGrade){
+	public static double studentsPassed(List<Marksheet> studentGrade){
 		double passed = 0;
+		double pass = 0;
 		for(Marksheet mark : studentGrade){
 			if(mark.grades >= 40){
 				passed += 1;
 			}
 		}
-		return 100*(passed/studentGrade.size());
+		try {
+			pass = 100 * (passed / studentGrade.size());
+		}
+		catch (Exception e){
+			System.out.println("Can't be divide by zero");
+		}
+		return pass;
 	}
 }
 
