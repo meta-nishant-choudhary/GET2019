@@ -61,9 +61,6 @@ public class Result {
 		System.out.println("MAX: " + Marksheet.maxGrade(studentGrade));
 		System.out.println("MIN: " + Marksheet.minGrade(studentGrade));
 		System.out.println("Pass: " + Marksheet.studentsPassed(studentGrade));
-		}
-	/*public static int inputCheck(  ) {
-		
-	}*/
 	}
+}
 
