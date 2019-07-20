@@ -30,8 +30,9 @@ public class ArrOperation {
 				else {
 					if( count > max ){
 						max = count;
+						count = 0;
+						break;
 					}
-					count = 0;
 				}
 			}
 			if( count > max ){
