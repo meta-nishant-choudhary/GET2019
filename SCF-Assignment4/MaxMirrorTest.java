@@ -16,35 +16,31 @@ import org.junit.runners.Parameterized.Parameters;
 public class MaxMirrorTest {
 	
 	public int[] array;
-	public int negativeResult;
-	public int positiveResult;
+	public int result;
 	
-	public MaxMirrorTest(int[] array, int negativeResult, int positiveResult) {
+	public MaxMirrorTest(int[] array, int result) {
 		super();
 		this.array = array;
-		this.negativeResult = negativeResult;
-		this.positiveResult = positiveResult;
+		this.result = result;
 	}
 	
 	@Parameters
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][]{     
-					{new int[]{1,2,3,8,9,3,2,1}, 3, 2},
-					{new int[]{7, 1, 4, 9, 7, 4, 1}, 2, 7},
-					{new int[]{1, 2, 1, 4}, 3, 4},
-					{new int[] {},0,1},
-		}); 
+					{new int[]{1, 2, 3, 8, 9, 3, 2, 1}, 3},
+					{new int[]{7, 1, 4, 9, 7, 4, 1}, 2},
+					{new int[]{1, 2, 1, 4}, 3},
+					}); 
 	}
 	
 	@Test
-	public void testNegative(){
-		assertEquals(negativeResult, ArrOperation.longestMirror(array));
-		
+	public void test(){     
+		assertEquals(result, ArrOperation.longestMirror(array));
 	}
 	
-	@Test
-	public void testPositive(){
-		assertNotEquals(positiveResult, ArrOperation.longestMirror(array));
-		
+	@Test(expected = AssertionError.class)
+	public void emptyError(){
+		int[] input = {};
+		ArrOperation.longestMirror(input);
 	}
 }

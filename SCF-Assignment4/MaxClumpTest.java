@@ -19,34 +19,32 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class MaxClumpTest {
 	public int[] array;
-	public int positiveResult;
-	public int negativeResult;
+	public int result;
 	
-	public MaxClumpTest(int[] array, int positiveResult, int negativeResult) {
+	public MaxClumpTest(int[] array, int result) {
 		super();
 		this.array = array;
-		this.positiveResult = positiveResult;
-		this.negativeResult = negativeResult;
+		this.result = result;
 	}
 	
 	@Parameters
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][]{     
-					{new int[] {1, 2, 2, 3, 4, 4}, 2, 4},
-					{new int[] {1, 1, 2, 1, 1}, 2, 4},
-					{new int[] {1, 1, 1, 1, 1}, 1, 4},
-					{new int[] {},0,1},
+					{new int[] {1, 2, 2, 3, 4, 4}, 2},
+					{new int[] {1, 1, 2, 1, 1}, 2},
+					{new int[] {1, 1, 1, 1, 1}, 1},
 					}); 
 	}
 	
 	@Test
 	public void testPositive() {
-		assertEquals(positiveResult, ArrOperation.clumps(array));	
+		assertEquals(result, ArrOperation.clumps(array));	
 	}
 	
-	@Test
-	public void testNegative() {
-		assertNotEquals(negativeResult, ArrOperation.clumps(array));
+	@Test(expected = AssertionError.class)
+	public void emptyError(){
+		int[] input = {};
+		ArrOperation.longestMirror(input);
 	}
 		
 }

@@ -14,35 +14,32 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class SplitArrayTest {
 	public int[] array;
-	public int negativeResult;
-	public int positiveResult;
-	
-	public SplitArrayTest(int[] array, int positiveResult, int negativeResult ) {
+	public int result;
+
+	public SplitArrayTest(int[] array, int result) {
 		super();
 		this.array = array;
-		this.negativeResult = negativeResult;
-		this.positiveResult = positiveResult;
+		this.result = result;
 	}
-	
+
 	@Parameters
 	public static Collection<Object[]> data() {
-		return Arrays.asList(new Object[][]{     
-					{new int[]{1, 1, 1, 2, 1}, 3, 1},
-					{new int[]{2, 1, 1, 2, 1}, -1, 2},
-					{new int[]{10, 10}, 1, 2},
-					{new int[] {},0,1},
-		}); 
+		return Arrays.asList(new Object[][] {
+				{ new int[] { 1, 1, 1, 2, 1 }, 3 },
+				{ new int[] { 2, 1, 1, 2, 1 }, -1 },
+				{ new int[] { 10, 10 }, 1 }
+					
+				});
 	}
-	
-	@Test
-	public void testPositive(){
-		assertEquals(positiveResult, ArrOperation.splitArray(array));	
-	}
-	
 
 	@Test
-	public void testNegative(){
-		Assert.assertNotEquals(negativeResult,ArrOperation.splitArray(array) );
-	
-}
+	public void test() {
+		assertEquals(result, ArrOperation.splitArray(array));
+	}
+
+	@Test(expected = AssertionError.class)
+	public void emptyError() {
+		int[] input = {};
+		ArrOperation.longestMirror(input);
+	}
 }

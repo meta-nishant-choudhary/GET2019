@@ -18,8 +18,6 @@ public class FitXYPositiveTest {
 	public int x;
 	public int y;
 	
-	
-	
 	public FitXYPositiveTest(int[] array, int[] result, int x, int y) {
 		super();
 		this.array = array;
@@ -35,13 +33,37 @@ public class FitXYPositiveTest {
 					{new int[]{5, 4, 9, 4, 9, 5}, new int[]{9, 4, 5, 4, 5, 9}, 4, 5,},
 					{new int[]{1, 4, 1, 5}, new int[]{1, 4, 5, 1}, 4, 5},
 					{new int[]{1, 4, 1, 5, 5, 4, 1}, new int[]{1, 4, 5, 1, 1, 4, 5}, 4, 5},
-					{new int[]{},new int[]{0},4,5},
 		});
 	}
 	
 	@Test
-	public void testPositive(){
+	public void test(){
 			Assert.assertArrayEquals(result, ArrOperation.fitXY(array, x, y));
 	}
+	
+	@Test(expected = AssertionError.class)
+	public void emptyError(){
+		int[] input = {};
+		ArrOperation.longestMirror(input);
+	}
+	
+	@Test(expected = AssertionError.class)
+	public void fixXYUnequalXY(){
+		int[] array = {4, 4, 5, 5, 4};
+		assertEquals(3, ArrOperation.fitXY(array,4,5));
+	}
+	
+	@Test(expected = AssertionError.class)
+	public void fixXYAdjecentX(){
+		int[] array = {4,4,5,5};
+		assertEquals(3,ArrOperation.fitXY(array,4,5));
+	}
+	
+	@Test(expected = AssertionError.class)
+	public void fixXYLastX(){
+		int[] array = {4,4,5,5,5,4};
+		assertEquals(3,ArrOperation.fitXY(array,4,5));
+	}
+	
 }
 	
