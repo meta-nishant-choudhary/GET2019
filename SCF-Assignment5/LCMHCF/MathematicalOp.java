@@ -13,21 +13,7 @@ public class MathematicalOp {
 		if(smallerNumber < 0 || largerNumber < 0){
 			throw new AssertionError();
 		}
-		if(smallerNumber > largerNumber){
-		    	int swapper = largerNumber;
-		    	largerNumber = smallerNumber;
-		    	smallerNumber = swapper;
-		    }
-		try {
-			if(largerNumber % smallerNumber == 0) {
-				return largerNumber;
-			}
-			else {
-				return lcm(smallerNumber, largerNumber * 2);
-			}
-		}catch(ArithmeticException exception) {
-			throw exception;
-		}
+		return (smallerNumber * largerNumber) / GCD(smallNumber, largerNumber);
 	}
 	
 	/**
