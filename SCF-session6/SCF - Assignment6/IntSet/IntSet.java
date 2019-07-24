@@ -7,9 +7,9 @@ import java.util.Arrays;
 public class IntSet {
 	private final int UPPER_BOUND = 1000;
 	private final int LOWER_BOUND = 1;
-	private final Integer[] set;
+	public final Integer[] set;
 
-	private IntSet(Integer[] inputSet) {
+	public IntSet(Integer[] inputSet) {
 		this.set = inputSet;
 	}
 
@@ -100,6 +100,7 @@ public class IntSet {
 			}
 		}
 		Integer result[] = new Integer[compliment.size()];
+		compliment.toArray(result);
 		IntSet complimentSet = new IntSet(result);
 		return complimentSet;
 	}
@@ -111,17 +112,20 @@ public class IntSet {
 	 * @param s2
 	 * @return unionSet
 	 */
-	public static IntSet union(IntSet s1, IntSet s2) {
+	public IntSet union(IntSet s1, IntSet s2) {
 		List<Integer> set1 = new ArrayList<Integer>(Arrays.asList(s1.set));
 		List<Integer> set2 = new ArrayList<Integer>(Arrays.asList(s2.set));
 		List<Integer> union = new ArrayList<Integer>();
 		union.addAll(set1);
+		
 		for (int i = 0; i < set2.size(); i++) {
 			if (!union.contains(set2.get(i))) {
 				union.add(set2.get(i));
 			}
 		}
+		
 		Integer result[] = new Integer[union.size()];
+		union.toArray(result);
 		IntSet unionSet = new IntSet(result);
 		return unionSet;
 	}
