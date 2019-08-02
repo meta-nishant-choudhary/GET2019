@@ -34,10 +34,10 @@ public class Stack<T> {
 	}
 
 	public boolean isEmpty() {
-		if (top == null)
+		if (top == null) {
 			return true;
-		else
-			return false;
+		}
+		return false;
 	}
 
 }
