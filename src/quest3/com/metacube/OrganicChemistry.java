@@ -56,10 +56,4 @@ public class OrganicChemistry {
 		elements.put('H', 1);
 	}
 
-	public static void main(String[] args) {
-
-		String formula = "C2(H(OH)2)";
-		System.out.println(caluclateMass(formula));
-		;
-	}
 }
