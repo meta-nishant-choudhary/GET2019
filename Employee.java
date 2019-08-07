@@ -41,8 +41,6 @@ public class Employee implements Cloneable {
 		
 		Node ptr = ep2.insertionSort(ep2.head);
 		System.out.println("");
-		
-		System.out.println("\n\n GAAND MEI DANDA DEY!!\n");
 	}
 	
 	/**
