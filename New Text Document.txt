@@ -1,0 +1,17 @@
+1.) In session of DBMS the  Normalization is the technique to organize the data in a systematic approach.
+
+2.) the Normalization technique are useful to make to reduce the redundancy of the data in tables.
+
+3.) This is use to reduce the undwsired anamolie like insert, delete and update.
+
+4.) the insert, delete anamolie like null values and other factors are eliminated.
+
+5.) perpose of the Normalization is to : (a) Reduce the data redundancy
+					 (b) the data is used to stored according to the type and at its logical storage.
+
+
+6.) there are 4 normalization rule:
+	(a) 1st Normal Form : First normal form (1NF) is a property of a relation in a relational database. A relation is in first normal form if and only if the domain of each attribute contains only atomic (indivisible) values, and the value of each attribute contains only a single value from that domain.
+	(b) 2nd Normal form : The second NF should be first NF then every non key attribute is fully functionally dependent on the primary key. The attributes IDSt and IDProf are the identification keys.
+	(c) 3rd Normal form :  the entity is in second normal form and no non-prime (non-key) attribute is transitively dependent on any key i.e. no non-prime attribute depends on other non-prime attributes. All the non-prime attributes must depend only on the keys.
+	(d) BCNF : A table is in BCNF if every functional dependency X ? Y, X is the super key of the table. For BCNF, the table should be in 3NF, and for every FD, LHS is super key.
