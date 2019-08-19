@@ -139,7 +139,22 @@ select id, category_name, parent_category from category where category_name NOT 
 select p.id, p.name from product p, product_category pc, category c
 where c.category_name='mobile phone' AND pc.category_id=c.id AND pc.product_id=p.id;
 
+#
 select name as Product_Name from product where quantity<50;
+                                    
+#change in code
+create table Stock(Id int primary key AUTO_INCREMENT,
+                   quantity int, 
+                   p_Id int,
+                   Foreign key (p_Id) references product(Id)
+                   );
+
+insert into Stock values(1, 10, 1),
+                        (2, 50, 2),
+                        (3, 60, 3);
+
+select p.Name from product AS p, Stock AS s where p.Id=s.p_Id group by s.quantity < 50;
+#                                  
 
 update product set quantity=quantity+100;
 
