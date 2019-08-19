@@ -159,23 +159,15 @@ insert into item_list (product_id, order_number, status) values
 3.) SELECT o.id, o.date_of_order_placed, o.user_id, o.amount from orders AS o, item_list AS i where DATEDIFF(CURDATE(), o.date_of_order_placed) > 10 AND 
 o.id=i.order_number AND i.status!='Shipped';
 
+4.) select u.name from user u,role r where u.id=r.user_id and u.id NOT In(select user_id from orders where date_of_order_placed > CURDATE()-30);
+                
 5.) SELECT  u9.id, u.name, o.amount, o.date_of_order_placed, o.id
  from user as u, orders as o 
 where u.id=o.user_id AND DATEDIFF(CURDATE(), o.date_of_order_placed) <=15;
 
-LOAD DATA LOCAL INFILE  "C:/Users/Home/Documents/orders_list.txt" INTO TABLE ORDERS;
-SELECT DAY(date_of_order_placed)  from orders where id=2;
-
 6.) select i.id from orders AS o , item_list AS i where o.id = i.id AND i.status = 'Shipped';	
-
-SELECT i.id, p.name 
-from item_list AS i, product AS p 
-where i.order_number=1 AND i.product_id=p.id;
 
 7.) SELECT p.name, p.price, o.date_of_order_placed
 from orders as o, product as p, item_list as i
 where i.order_number=o.id AND i.product_id=p.id AND p.price BETWEEN 20 AND 50;
 
-update i set i.status='Shipped' 
-from orders o, itme_list i
-where o.date_of_order_placed=CURDATE() LIMIT 20;
