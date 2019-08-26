@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function checkValidation(form){
+	password1=form.password.value;
+	password2=form.cpassword.value;
+	if(password1 != password2){
+		alert("\nPassword did not match: Please try again..")
+		return false;
+	}
+	else{
+		    var y = document.getElementById("empDetail");
+		    y.style.display = "none";	
+		    var x = document.getElementById("addVehicle");
+	        x.style.display="block";
+			return false;
+	}
+}
+function showPassPrice(form){
+    var x = document.getElementById("addVehicle");
+	    x.style.display="none";
+    var y = document.getElementById("showPass");
+	    y.style.display = "block";	
+    type=form.vehicleType.value;
+    document.getElementById('selectedVehicle').innerHTML = type;
+    if(type == "CYCLE"){
+       document.getElementById('daily').innerHTML = '5';
+       document.getElementById('monthly').innerHTML = '100';
+       document.getElementById('yearly').innerHTML = '500';
+       document.getElementById('currency').innerHTML = 'INR';
+    }
+    else if(type == "MOTOR CYCLE"){
+        document.getElementById('daily').innerHTML = '10';
+       document.getElementById('monthly').innerHTML = '200';
+       document.getElementById('yearly').innerHTML = '1000';
+       document.getElementById('currency').innerHTML = 'INR';
+    }
+    else if(type == "FOUR WHEELER"){
+        document.getElementById('daily').innerHTML = '210';
+       document.getElementById('monthly').innerHTML = '500';
+       document.getElementById('yearly').innerHTML = '3500';
+       document.getElementById('currency').innerHTML = 'INR';
+    }
+    
+    return false;
+}
+function generatepass(form){
+    document.getElementById("price").innerHTML = form.passes.value;
+    document.getElementById("name").innerHTML = document.getElementById('empName').value;
+    document.getElementById('vno').innerHTML = document.getElementById('vehicleNumber').value;
+    var x = document.getElementById("showPass");
+	x.style.display = "none";
+    var z = document.getElementById("generatePass");
+    z.style.display = "block";
+    return false;
+}
+function parkingSystem() {
+    var x = document.getElementById("addVehicle");
+	x.style.display = "none";
+    var y = document.getElementById("showPass");
+    y.style.display = "none";
+    var z = document.getElementById("generatePass");
+    z.style.display = "none";
+}
+</script>
+
+</head>
+<body onload="parkingSystem()">
+
+<div id='empDetail'>
+<center>
+<pre>
+<form action="" method="POST" onsubmit="return checkValidation(this)">
+<h2>Enter Personal Details</h2>
+FULL NAME   	:	<input type="text" name="empName" id="empName" minlength=2 pattern="[A-Z]*[a-z]*" oninvalid="this.setCustomValidity('Invalid Name')" oninput="this.setCustomValidity('')"  required>
+GENDER		    :	<label><input type="radio" name="gender" value="male" checked>MALE</label><label><input type="radio" name="gender" value="female" checked>FEMALE</label>
+Email ID	    :	<input type ="email" name="email" oninput="this.setCustomValidity('')" required>
+Password	    :	<input type ="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" oninvalid="this.setCustomValidity('Password should contain upper & lower case and numberic and symbol')" oninput="this.setCustomValidity('')" required>
+Confirm Pass	:	<input type ="password" name="cpassword" required>
+Contact No.	    :	<input type ="number" name="contact" maxlength="10" required>
+                    <input type="submit" value="REGISTERED">
+</form>
+</pre>
+</centre> 
+</div>
+
+<div id='addVehicle'>
+<center>
+        <form action="" method="POST" onsubmit="return showPassPrice(this)">
+            <h2> Vehicle Details </h2>
+            <table align="center" border="1">
+                <tr>
+                    <td>Vehicle Name</td>
+                    <td><input type="text" name="vehicleName" required></td>
+                </tr>
+                <tr>
+                        <td>Vehicle Type</td> 
+                        <td><select name="vehicleType" required><option value="CYCLE">CYCLE</option>
+                                    <option value="MOTOR CYCLE">MOTOR CYCLE</option>
+                                    <option value="FOUR WHEELER">FOUR WHEELER</option>
+                                    </select>
+                        </td>  
+                </tr>
+                <tr>
+                    <td>Vehicle number</td>
+                    <td><input type="text" name="vehicleNumber" id="vehicleNumber" required></td> 
+                </tr>
+                <tr>
+                <td>Employee Id</td>
+                <td><input type="text" name="empId" required></td>
+                </tr>
+                <tr>
+                <td>Identification </td>
+                <td>  <textarea name="identification"></textarea></td>
+                </tr>
+            </table>
+            <input type="submit" value="Add Vehicle">
+        </form>
+                
+</center>
+</div>
+
+<div id="showPass">
+    <center>
+        <h2>Pass Prices</h2>
+    <form action="" method="POST" onsubmit="return generatepass(this)">
+        <h2 id="selectedVehicle"></h2>
+        <h3> Currency In <p id="currency"></p></h3>
+        <select id="selectCurrency" onchange="changeCurrency()">
+        <option value="INR">INR</option>
+        <option value="USD">USD</option>
+        <option value="YEN">YEN</option>
+        </select>
+        <br/>
+        <input type="radio" value="daily" name="passes"><label id="daily"></label>(Daily)<br/>
+        <input type="radio" value="monthly" name="passes"><label id="monthly"></label>(Monthly)<br/>
+        <input type="radio" value="yearly" name="passes"><label id="yearly"></label>(Yearly)<br/>
+        <input type="submit" value="Get Pass">
+    </form>
+    </center>
+
+</div>
+
+<div id="generatePass">
+    <center>
+        <h2>Pass Generated</h2>
+        Name : <label id="name"></label><br/>
+        Vehicle No. : <label id="vno"></label><br/>
+        Total Price : <label id="price"></label><br/>
+    </center>
+</div>
+
+</body>
+</html>
