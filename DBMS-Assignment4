@@ -1,0 +1,75 @@
+#Session 4
+#ASSIGNMENT 1
+#Q1
+#Create a function to calculate number of orders in a month. Month and year will be input parameter to function.
+
+DELIMITER $$
+CREATE FUNCTION  number_of_orders(month INT, year INT) returns int DETERMINIStIC
+BEGIN	
+	DECLARE RESULT INT;
+	SELECT count(Id) INTO RESULT from orders where month = Month(orders.Date_of_order_placed) AND year = YEAR(orders.Date_of_order_placed);
+	return RESULT;
+END $$
+
+select number_of_orders(07,2019);
+
+#Q2
+#Create a function to return month in a year having maximum orders. Year will be input parameter.
+
+DELIMITER $$
+CREATE FUNCTION  max_orders_month_in_a_year(year INT) returns int DETERMINIStIC
+BEGIN	
+	DECLARE RESULT INT;
+	SELECT Month(orders.Date_of_order_placed) INTO RESULT from orders where year = YEAR(orders.Date_of_order_placed) group by month(orders.Date_of_order_placed);
+	return RESULT;
+END $$
+
+drop function max_orders_month_in_a_year
+select max_orders_month_in_a_year(2019);
+
+#ASSIGNMENT2
+#Q1
+#Create a Stored procedure to retrieve average sales of each product in a month. Month and year will be input parameter to function.
+DELIMITER $@
+
+CREATE PROCEDURE avg_sales(month INT, year INT) 
+
+BEGIN
+
+select p.Id, p.Name, Avg(o.Amount) from product AS p, Item_List AS i, orders AS o 
+where o.Id=i.Order_Id AND i.Product_Id=p.Id AND month=MONTH(o.Date_of_order_placed) AND year=YEAR(o.Date_of_order_placed)
+group by p.Id;
+
+end $@
+
+call avg_sales(7, 2019);
+
+#Q2
+#Create a Stored procedure to retrieve average sales of each product in a month. Month and year will be input parameter to function.
+
+DELIMITER $&
+create procedure get_order_status_of_certain_period(start_date DATE, end_date DATE)
+
+BEGIN
+
+if start_date < end_date then
+
+SELECT p.Name, p.Quantity, i.status
+from orders o join Item_List i join product p
+where o.Id=i.Order_Id AND i.Product_Id=p.Id AND o.Date_of_order_placed between start_date AND end_date;
+
+else
+
+SELECT p.name, p.Quantity,i.status
+from orders o join Item_List i join product p
+where o.Id=i.Order_Id AND i.Product_Id=p.Id AND o.Date_of_order_placed between DATE_FORMAT(end_date ,'%Y-%m-01') AND end_date;
+
+end if;
+
+end $&
+
+call get_order_status_of_certain_period("2019-01-10","2019-08-02");
+
+# Assignment 3
+# identify the columns require indexing in order, product, category tables and create indexes.
+#don't find any index
