@@ -72,4 +72,7 @@ call get_order_status_of_certain_period("2019-01-10","2019-08-02");
 
 # Assignment 3
 # identify the columns require indexing in order, product, category tables and create indexes.
-#don't find any index
+# columns are : in 
+product: Name, 
+orders: Date_of_order_placed,
+category: Category_Name
