@@ -16,12 +16,18 @@ public class StoreFront {
 	 * @return con object type: Connection
 	 * @throws Exception
 	 */
-	public Connection buildConnection() throws Exception {
-		Connection con;
-		Class.forName("com.mysql.jdbc.Driver");
-		con = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/StoreFront", "root", "Pra@ajm123");
-		return con;
+	public Connection buildConnection() {
+		try {
+			Connection con;
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/StoreFront", "root", "Pra@ajm123");
+			return con;
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 	/**
@@ -29,7 +35,8 @@ public class StoreFront {
 	 * @param userId
 	 * @throws Exception
 	 */
-	public void fetchOrdersOfUser(int userId) throws Exception {
+	public void fetchOrdersOfUser(int userId) {
+		try {
 		Connection con = buildConnection();
 		String query = "select id,date_of_order_placed AS DATE,amount from orders where status='Shipped' and user_id=? order by date_of_order_placed desc";
 		PreparedStatement stmt = con.prepareStatement(query);
@@ -49,6 +56,10 @@ public class StoreFront {
 					+ " " + order.getAmount());
 		}
 		con.close();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -82,7 +93,7 @@ public class StoreFront {
 		}
 	}
 
-	public int setInactive() throws Exception {
+	public int setInactive() {
 		String query = "update product set status='Inactive' WHERE id NOT IN(SELECT i.product_id FROM item_list i join orders o where"
 				+ " o.id=i.order_Id AND DATEDIFF(CURDATE(),o.Date_of_order_placed)<365)";
 		int numOfInactives = 0;
@@ -93,7 +104,7 @@ public class StoreFront {
 
 			numOfInactives = stmt.executeUpdate();
 
-		} catch (SQLException ex) {
+		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 		return numOfInactives;
@@ -105,10 +116,9 @@ public class StoreFront {
 	 * 
 	 * @throws Exception
 	 */
-	public void showCategories() throws Exception {
+	public void showCategories() {
 		String query = "select DISTINCT c.parent_category, COUNT(c.parent_id) AS Numbber_Of_Children FROM category c GROUP BY c.parent_id ORDER BY c.parent_category";
 		try {
-
 			Connection conn = buildConnection();
 			PreparedStatement stmt = conn.prepareStatement(query);
 			System.out.println("The SQL query is: " + query);
@@ -123,7 +133,7 @@ public class StoreFront {
 				System.out.println(category.getName() + "\t"
 						+ category.getNumberOfChildren());
 			}
-		} catch (SQLException ex) {
+		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 	}
