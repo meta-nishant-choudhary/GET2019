@@ -17,7 +17,7 @@
 		<pre>
 		<form action="AddStudent" method="POST">
 			<h3>Add Student Details</h3>
-			Roll No.:		<input type="number" minlength="2" Name="roll_no" required="required"></input>
+			Roll No.:		<input type="number" min="1" minlength="2" Name="roll_no" required="required"></input>
 			First Name:		<input type="text" pattern="[A-Z a-z]*" minlength="2" Name="f_name" required="required"></input>
 			Last Name: 		<input type="text" pattern="[A-Za-z]*" minlength="2" Name="l_name" required="required"></input>
 			Father_Name: 	   	<input type="text" pattern="[A-Za-z]*" minlength="2" Name="father_name" required="required"></input>
