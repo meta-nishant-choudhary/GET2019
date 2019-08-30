@@ -16,11 +16,12 @@
 	<pre>
 	<form action="SearchStudent" method="Post">
 		<select Name="type">
-			<option value="f_name">First Name</option>
-			<option value="l_name">Last Name</option>
+			<option value="first_name">First Name</option>
+			<option value="last_name">Last Name</option>
 		</select>
+		<input type="checkbox" name="checkbox" value="class">Class Wise</input>
 		<label>Enter value to search: </label>
-		<input type="text" name="name" pattern="[A-Za-z]*">
+		<input type="text" name="name" pattern="[A-Za-z]*" required="required">
 		<input type="submit"></input>
 	</form>
 	</pre>
