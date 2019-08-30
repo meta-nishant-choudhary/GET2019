@@ -22,8 +22,8 @@
 			Last Name: 		<input type="text" pattern="[A-Za-z]*" minlength="2" Name="l_name" value="<%=student.getlName() %>" required="required"></input>
 			Father_Name: 	   	<input type="text" pattern="[A-Za-z]*" minlength="2" Name="father_name" value="<%=student.getFatherName() %>" required="required"></input>
 			E-Mail: 		<input type="email" Name="Email" value="<%=student.getEmail() %>" required="required"></input>
-			Class: 			<input type="number" Name="Class" value="<%=student.getStudentClass()%>" required="required"></input>
-			Age: 			<input type="number" Name="Age" value="<%=student.getAge() %>" required="required"></input>
+			Class: 			<input type="number" min="1" Name="Class" value="<%=student.getStudentClass()%>" required="required"></input>
+			Age: 			<input type="number" min="2" Name="Age" value="<%=student.getAge() %>" required="required"></input>
 							<input type="submit" value="Update"></input>
 		</form>
 		</pre>
