@@ -22,8 +22,8 @@
 			Last Name: 		<input type="text" pattern="[A-Za-z]*" minlength="2" Name="l_name" required="required"></input>
 			Father_Name: 	   	<input type="text" pattern="[A-Za-z]*" minlength="2" Name="father_name" required="required"></input>
 			E-Mail: 		<input type="email" Name="Email" required="required"></input>
-			Class: 			<input type="number" Name="Class" required="required"></input>
-			Age: 			<input type="number" Name="Age" required="required"></input>
+			Class: 			<input type="number" min="1" Name="Class" required="required"></input>
+			Age: 			<input type="number" min="2" Name="Age" required="required"></input>
 							<input type="submit" value="Submit"></input>
 		</form>
 		</pre>
