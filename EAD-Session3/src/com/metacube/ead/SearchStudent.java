@@ -33,15 +33,18 @@ public class SearchStudent extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name = null;
-		String query;
+		String classwise = null;
 		try {
 			name = request.getParameter("name");
-			if(request.getParameter("type").equals("f_name")) {
+			String column = request.getParameter("type");
+			classwise = request.getParameter("checkbox");
+			String query = "";
+			if(classwise != null) {
 				name = request.getParameter("name");
-				query = "select * from student_detail where first_name ='" + name+"'";
+				query = "select * from student_detail where " + column + "='" + name+"' order by class";
 			}
 			else {
-				query = "select * from student_detail where last_name = '" + name+"'";
+				query = "select * from student_detail where " + column + "='" + name+"'";
 			}
 			Connection conn = getConnection();
 			Statement stmt = conn.createStatement();
