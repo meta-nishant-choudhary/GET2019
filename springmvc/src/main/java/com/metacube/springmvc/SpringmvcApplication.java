@@ -1,13 +1,13 @@
-package com.metacube.mailsender;
+package com.metacube.springmvc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MailsenderApplication {
+public class SpringmvcApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MailsenderApplication.class, args);
+		SpringApplication.run(SpringmvcApplication.class, args);
 	}
 
 }
