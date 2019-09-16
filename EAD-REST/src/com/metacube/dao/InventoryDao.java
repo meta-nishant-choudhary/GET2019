@@ -94,7 +94,7 @@ public class InventoryDao {
 	
 	public Status updateAll(String name, Inventory inventory) throws SQLException {
 		Connection conn = DBConncetion.getConnection();
-		PreparedStatement stmt = conn.prepareStatement(DBQueries.UPDATE);
+		PreparedStatement stmt = conn.prepareStatement(DBQueries.UPDATEALL);
 		stmt.setInt(1, inventory.getQuantity());
 		stmt.setString(2, name);
 		int res = stmt.executeUpdate();
