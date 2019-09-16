@@ -5,7 +5,7 @@ public class DBQueries {
 	
 	public static String UPDATE = "update inventory set quantity=? where name=?;";
 	
-	public static String UPDATEALL = "update inventory name=?, quantity=? where name=?;";
+	public static String UPDATEALL = "update inventory set name=?, quantity=? where name=?;";
 	
 	public static String DELETEALL = "delete from inventory";
 	
