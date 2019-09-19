@@ -55,12 +55,12 @@ public class PriorityQueue {
 		p.enqueue(4, 4);
 		p.enqueue(3, 3);
 		p.enqueue(5, 5);
-		for(int i = 0; i < p.size; i++) {
+		for(int i = 0; i < p.size(); i++) {
 			System.out.println("priority: " + p.queue[i].getPriority() + "\t item: " + p.queue[i].getItem());
 		}
 		System.out.println("");
 		p.dequeue();
-		for(int i = 0; i < p.size; i++) {
+		for(int i = 0; i < p.size(); i++) {
 			System.out.println("priority: " + p.queue[i].getPriority() + "\t item: " + p.queue[i].getItem());
 		}
 		
