@@ -45,6 +45,11 @@ public class EmployeeController {
 		if (session.getAttribute("vehicle") == null) {
 			session.setAttribute("vehicle", new Vehicle());
 		}
+		//password validation
+		if(!employee.getPassword().equals(employee.getCpassword())) {
+			model.addAttribute("errormessage", "password and confirm password should be same");
+			return "registration_form";
+		}
 		
 		List<Employee> empList =  empfac.fetchEmployee();
 		for(Employee emp : empList) {
@@ -130,6 +135,28 @@ public class EmployeeController {
 			}
 		}
 	}
+	
+	@RequestMapping("/changepicture")
+	public String changepicture(@RequestParam("image") MultipartFile file,HttpServletRequest request){
+		HttpSession session = request.getSession();
+		if (!file.isEmpty()) {
+		String path=session.getServletContext().getRealPath("/");  
+		       String filename=file.getOriginalFilename();  
+		      try{  
+		       byte barr[]=file.getBytes();  
+		         
+		       BufferedOutputStream bout=new BufferedOutputStream(  
+		                new FileOutputStream(path+"/images/"+session.getAttribute("emp_id").toString()+".jpg"));  
+		       bout.write(barr);  
+		       bout.flush();  
+		       bout.close();  
+		         
+		       }catch(Exception e){System.out.println(e);}  
+
+		}
+		return "homepage";
+
+		}
 
 	
 	@RequestMapping("/friend")
