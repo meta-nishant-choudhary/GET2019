@@ -47,6 +47,10 @@ public class PriorityQueue {
 		return queue[0].getItem();
 	}
 	
+	public Integer size() {
+		return this.queue.length();
+	}
+	
 	public static void main(String[] args) {
 		PriorityQueue p = new PriorityQueue();
 		Arrays.fill(p.queue, null);
