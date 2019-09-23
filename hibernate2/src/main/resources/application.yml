@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+ datasource:
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/student_details
+  username: root
+  password: Pra@ajm123
+ mvc:
+  view:
+   prefix: /view/
+   suffix: .jsp
+home:
+ message: Welcome to Meta-Parking Spring Project!
