@@ -9,9 +9,7 @@ import java.sql.Statement;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
+
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
@@ -26,8 +24,6 @@ public class VehicleDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
 	
 	public void insertVehicle(Vehicle vehicle) {
 		Session session = sessionFactory.getCurrentSession();
@@ -36,8 +32,7 @@ public class VehicleDao {
 	}
 	
 	public int fetchVehicle() {
-		RowMapper<Vehicle> rowMapper = new BeanPropertyRowMapper<Vehicle>(Vehicle.class);
-		Vehicle veh = jdbcTemplate.queryForObject(DBQueries.FETCHVEHICLE, rowMapper);
-		return veh.getId();
+		Session session = sessionFactory.getCurrentSession();
+		return session.createQuery("select max(id) from Vehicle",Integer.class).getSingleResult();
 	}
 }
