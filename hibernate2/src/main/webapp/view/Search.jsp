@@ -44,10 +44,8 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="student" items="${studentData}"
-						varStatus="loopcounter">
+					<c:forEach var="student" items="${studentData}">
     					<tr>
-							<td>${loopcounter.count }</td>
 							<td>${student.firstName }</td>
 							<td>${student.lastName}</td>
 							<td>${student.fatherName}</td>
