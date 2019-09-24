@@ -34,7 +34,6 @@
 			<table>
 				<thead>
 					<tr>
-						<th>Sno.</th>
 						<th>Firstname</th>
 						<th>Lastname</th>
 						<th>Father Name</th>
