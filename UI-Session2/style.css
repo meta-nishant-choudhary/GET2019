@@ -1,0 +1,123 @@
+<style>
+    /*style for employee registration*/
+    #empForm {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /*style for vehicle registration*/
+    #vehicleForm {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /*style for employee registration*/
+    #getInTouchForm {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    /*style for Pricing section*/
+    #showPricing {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #parking {
+        background-image: linear-gradient(to right, red , yellow);
+    }
+
+    /* Style for Collapsible Buttons */
+    .collapsible {
+        background-color:lightslategray;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+
+
+    /* Style for Collapsible Buttons when they are hovered by mouse */
+    .active,
+    .collapsible:hover {
+        background-color: #555;
+    }
+
+    /* Style for Collapsible Buttons when the buttons are not active*/
+    .collapsible:after {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+    /* Style for Collapsible Buttons when buttons are active */
+    .active:after {
+        content: "\2212";
+    }
+
+    /* Style for content under collapsible buttons */
+    .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        
+    }
+
+    /* Style for price plan divs */
+    .price_plan
+    {
+        display: inline-block;
+        width: 30%;
+        margin: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    /* Style for price plans */
+    .price_display
+    {
+        border: 1px solid blue;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        padding: 20px 5px 0px 5px;
+    }
+
+    #shadow {
+        box-shadow: 5px 10px;
+    }
+
+        /*style for plans*/
+    div.plan {
+        width: 33%;
+        border-style: groove;
+        border-radius: 8px;
+        padding: 20px;
+        margin-left: 10px;
+    }
+    
+    div.monthPrice {
+        width: 25%;
+        height: 50px;
+        border-style: groove;
+        border-radius: 50px;
+    }
+    
+    div.field {
+        padding: 10px;
+    }
+    
+    td,th{
+        padding: 20px;
+        column-span: 1px;
+    }
+</style>     
