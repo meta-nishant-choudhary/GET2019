@@ -1,44 +1,53 @@
 <style>
     /*style for employee registration*/
     #empForm {
-        width: 50%;
+        width: 100%;
         text-align: center;
         margin: 0 auto;
     }
 
     /*style for vehicle registration*/
     #vehicleForm {
-        width: 50%;
+        width: 100%;
         text-align: center;
         margin: 0 auto;
     }
 
     /*style for employee registration*/
     #getInTouchForm {
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
     }
 
     /*style for Pricing section*/
     #showPricing {
-        width: 50%;
+        width: 10   0%;
         margin: 0 auto;
     }
 
-    #parking {
-        background-image: linear-gradient(to right, red , yellow);
+    input {
+        background-color:#fff;
+        border-radius: 10%;
+    }
+
+    .circle-container {
+        border: 1px solid black;
+        border-radius: 50%;
+        width : 70px;
+        height : 70px;
+        padding: 2px;
+        text-align: center;
     }
 
     /* Style for Collapsible Buttons */
     .collapsible {
-        background-color:lightslategray;
+        background-color:rgb(53, 117, 180);
         color: white;
         cursor: pointer;
         padding: 18px;
         width: 100%;
         border: none;
         text-align: left;
-        outline: none;
         font-size: 15px;
     }
 
@@ -54,6 +63,7 @@
         content: '\002B';
         color: white;
         font-weight: bold;
+        padding: 2px;
         float: right;
         margin-left: 5px;
     }
@@ -65,15 +75,27 @@
 
     /* Style for content under collapsible buttons */
     .content {
-        padding: 0 18px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        
+        padding: 20px;
+        height: 600px;
+        width: 100%;
+        border: 1px solid black;
     }
 
-    /* Style for price plan divs */
-    .price_plan
+
+    .pricing-container {
+        box-sizing: border-box;
+        border : 2px solid black;
+        border-radius: 5%;
+        padding: 20px;
+        width: 26%;
+        float: left;
+        margin-left: 50px;
+    }
+
+  
+
+    /*Style for price plan divs */
+    .showPricing
     {
         display: inline-block;
         width: 30%;
@@ -82,7 +104,7 @@
         border-radius: 5px;
     }
 
-    /* Style for price plans */
+    /*Style for price plans */
     .price_display
     {
         border: 1px solid blue;
@@ -92,32 +114,24 @@
         padding: 20px 5px 0px 5px;
     }
 
-    #shadow {
-        box-shadow: 5px 10px;
+
+    div.image_div {
+        margin-left: 54px;
+        height: 50px;
+        width: 30%;
+        margin-right: 10px;
+        margin-top: 20px;
+        padding-top:20px; 
+        background-color: #ffffff;
+        box-sizing: border-box;
     }
 
-        /*style for plans*/
-    div.plan {
-        width: 33%;
-        border-style: groove;
-        border-radius: 8px;
-        padding: 20px;
-        margin-left: 10px;
+    button {
+        background-color: cornflowerblue;
     }
-    
-    div.monthPrice {
-        width: 25%;
-        height: 50px;
-        border-style: groove;
-        border-radius: 50px;
-    }
-    
-    div.field {
-        padding: 10px;
-    }
-    
+
     td,th{
-        padding: 20px;
+        padding: 10px;
         column-span: 1px;
     }
 </style>     
