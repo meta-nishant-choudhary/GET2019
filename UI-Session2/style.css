@@ -1,0 +1,137 @@
+<style>
+    /*style for employee registration*/
+    #empForm {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /*style for vehicle registration*/
+    #vehicleForm {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /*style for employee registration*/
+    #getInTouchForm {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /*style for Pricing section*/
+    #showPricing {
+        width: 10   0%;
+        margin: 0 auto;
+    }
+
+    input {
+        background-color:#fff;
+        border-radius: 10%;
+    }
+
+    .circle-container {
+        border: 1px solid black;
+        border-radius: 50%;
+        width : 70px;
+        height : 70px;
+        padding: 2px;
+        text-align: center;
+    }
+
+    /* Style for Collapsible Buttons */
+    .collapsible {
+        background-color:rgb(53, 117, 180);
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        font-size: 15px;
+    }
+
+
+    /* Style for Collapsible Buttons when they are hovered by mouse */
+    .active,
+    .collapsible:hover {
+        background-color: #555;
+    }
+
+    /* Style for Collapsible Buttons when the buttons are not active*/
+    .collapsible:after {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        padding: 2px;
+        float: right;
+        margin-left: 5px;
+    }
+
+    /* Style for Collapsible Buttons when buttons are active */
+    .active:after {
+        content: "\2212";
+    }
+
+    /* Style for content under collapsible buttons */
+    .content {
+        padding: 20px;
+        height: 600px;
+        width: 100%;
+        border: 1px solid black;
+    }
+
+
+    .pricing-container {
+        box-sizing: border-box;
+        border : 2px solid black;
+        border-radius: 5%;
+        padding: 20px;
+        width: 26%;
+        float: left;
+        margin-left: 50px;
+    }
+
+  
+
+    /*Style for price plan divs */
+    .showPricing
+    {
+        display: inline-block;
+        width: 30%;
+        margin: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    /*Style for price plans */
+    .price_display
+    {
+        border: 1px solid blue;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        padding: 20px 5px 0px 5px;
+    }
+
+
+    div.image_div {
+        margin-left: 54px;
+        height: 50px;
+        width: 30%;
+        margin-right: 10px;
+        margin-top: 20px;
+        padding-top:20px; 
+        background-color: #ffffff;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: cornflowerblue;
+    }
+
+    td,th{
+        padding: 10px;
+        column-span: 1px;
+    }
+</style>     
