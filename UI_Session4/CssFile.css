@@ -18,7 +18,7 @@ header a{
 	background-size: cover;
 
 }
-#head, #footer{
+#footer{
 	height:25px;
 	padding:30px;
 	text-align: center;
@@ -96,14 +96,7 @@ header a{
     text-align:center;
 	padding-top:30px;
 }
-.subpart2{
-	display:inline-block;
-	width:50%;	
-}
-.subpart2Img{
-	display:inline-block;
-	width:30%;	
-}
+
 #screen1,#screen2,#screen3{
     display: flex;
     justify-content: space-around;
