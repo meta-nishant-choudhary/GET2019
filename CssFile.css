@@ -11,8 +11,6 @@ a{
 }
 
 .sidebar{
-    position:fixed;
-    z-index: 1;
     height:100%;
 }
 .dashboard li{
