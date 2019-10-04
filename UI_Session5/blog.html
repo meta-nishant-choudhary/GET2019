@@ -1,772 +1,199 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-
-    <title>BootStrap Assignment</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="CssFile.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.8.94/css/materialdesignicons.min.css">
-</head>
-
-<body>
-    <div class="row">
-        <div class="col-2 p-3 " id="sidebar">
-            <div class="text-center py-3">
-                <h4><strong>ANNEX</strong></h4>
-            </div>
-            <div class="p-3 ml-3 dashboard" id="accordion">
-                <p class="text-sm text-muted mb-2">Main</p>
-                <ul class="list-unstyled ">
-                    <li>
-                        <a href="#" class="row">
-                            <div class="col-2"><img src="images/dashboard.PNG" height="20px"></div>
-                            <div class="col-8">Dashboard</div>
-                            <span class="badge badge-pill mt-1 badge-primary">7</span>
-                        </a>
-                    </li>
-                    <li data-toggle="collapse" data-target="#collapseAdvancedUI" aria-expanded="false" aria-controls="collapseAdvancedUI">
-                        <a href="#" class="row">
-                            <div class="col-2"><img src="images/advanced-ui.PNG" height="20px"></div>
-                            <div class="col-8">Advanced UI</div>
-                            <i class="fa fa-angle-right pt-1"></i>
-                        </a></li>
-                    <ul id="collapseAdvancedUI" class="collapse list-unstyled sub-menu" aria-labelledby="advancedUI" data-parent="#accordion">
-                        <li><a href="#" class="text-muted">Highlight</a></li>
-                        <li><a href="#" class="text-muted">Rating</a></li>
-                        <li><a href="#" class="text-muted">Alertify</a></li>
-                        <li><a href="#" class="text-muted">Range Slider</a></li>
-                    </ul>
-                    <li>
-                        <a href="#" class="row">
-                            <div class="col-2"><img src="images/calender.PNG" height="20px"></div>
-                            <div class="col-8">Calender</div>
-                        </a>
-                    </li>
-                </ul>
-                <p class="text-sm text-muted mb-2">Components</p>
-                <ul class="list-unstyled ">
-                    <li id="uiElements" data-toggle="collapse" data-target="#collapseUIElements" aria-expanded="false" aria-controls="collapseUIElements">
-                        <a href="#" class="row">
-                            <div class="col-2"><img src="images/ui-elements.PNG" height="20px"></div>
-                            <div class="col-8">UI Elements</div>
-                            <i class="fa fa-angle-right pt-1"></i>
-                        </a>
-                    </li>
-                    <ul id="collapseUIElements" class="collapse list-unstyled sub-menu" aria-labelledby="uiElements" data-parent="#accordion">
-                        <li><a href="#" class="text-muted">Buttons</a></li>
-                        <li><a href="#" class="text-muted">Cards</a></li>
-                        <li><a href="#" class="text-muted">Tabs & Accordions</a></li>
-                        <li><a href="#" class="text-muted">Modals</a></li>
-                        <li><a href="#" class="text-muted">Images</a></li>
-                        <li><a href="#" class="text-muted">Alerts</a></li>
-                        <li><a href="#" class="text-muted">Progress Bars</a></li>
-                        <li><a href="#" class="text-muted">Dropdowns</a></li>
-                        <li><a href="#" class="text-muted">Lightbox</a></li>
-                        <li><a href="#" class="text-muted">Navs</a></li>
-                        <li><a href="#" class="text-muted">Paginations</a></li>
-                    </ul>
-                    <li><a href="#" class="row">
-                            <div class="col-2"><img src="images/forms.PNG" height="20px"></div>
-                            <div class="col-8">Forms</div>
-                            <span class="badge badge-pill mt-1 badge-primary">8</span>
-                        </a>
-                    </li>
-
-                    <li id="charts" data-toggle="collapse" data-target="#collapseCharts" aria-expanded="false" aria-controls="collapseCharts">
-                        <a href="#" class="row">
-                            <div class="col-2"><img src="images/charts.PNG" height="20px"></div>
-                            <div class="col-8">Charts</div>
-                            <i class="fa fa-angle-right pt-1"></i>
-                        </a>
-                    </li>
-                    <ul id="collapseCharts" class="collapse list-unstyled sub-menu" aria-labelledby="charts" data-parent="#accordion">
-                        <li><a href="#" class="text-muted">Morris Chart</a></li>
-                        <li><a href="#" class="text-muted">Chartist Chart</a></li>
-                        <li><a href="#" class="text-muted">Chartjs Chart</a></li>
-                        <li><a href="#" class="text-muted">Flot Chart</a></li>
-                        <li><a href="#" class="text-muted">C3 Chart</a></li>
-                        <li><a href="#" class="text-muted">JQuery Knob Chart</a></li>
-                    </ul>
-                    <li id="icons" data-toggle="collapse" data-target="#collapseIcons" aria-expanded="false" aria-controls="collapseIcons">
-                        <a href="#" class="row">
-                            <div class="col-2">
-                                <img src="images/icons.PNG" height="20px">
-                            </div>
-                            <div class="col-8">Icons</div>
-                            <i class="fa fa-angle-right pt-1"></i>
-                        </a>
-                    </li>
-                    <ul id="collapseIcons" class="collapse list-unstyled sub-menu" aria-labelledby="icons" data-parent="#accordion">
-                        <li><a href="#" class="text-muted">Material Design</a></li>
-                        <li><a href="#" class="text-muted">Ion Icons</a></li>
-                        <li><a href="#" class="text-muted">Font Awesome</a></li>
-                        <li><a href="#" class="text-muted">Themify Icons</a></li>
-                        <li><a href="#" class="text-muted">Dripicons</a></li>
-                        <li><a href="#" class="text-muted">Typicons Icons</a></li>
-                    </ul>
-                    <li id="tables" data-toggle="collapse" data-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables"><a href="#" class="row">
-                            <div class="col-2"><img src="images/tables.PNG" height="20px"></div>
-                            <div class="col-8">Tables</div>
-                            <i class="fa fa-angle-right pt-1"></i>
-                        </a>
-                    </li>
-                    <ul id="collapseTables" class="collapse list-unstyled sub-menu" aria-labelledby="tables" data-parent="#accordion">
-                        <li><a href="#" class="text-muted">Basic Tables</a></li>
-                        <li><a href="#" class="text-muted">Data Table</a></li>
-                        <li><a href="#" class="text-muted">Responsive Table</a></li>
-                        <li><a href="#" class="text-muted">Editable Table</a></li>
-                    </ul>
-                </ul>
-                <p class="text-sm text-muted mb-2">Extra</p>
-                <ul class="list-unstyled ">
-                    <li><a href="#" class="row">
-                            <div class="col-2"><img src="images/maps.PNG" height="20px"></div>
-                            <div class="col-8">Maps</div>
-                            <span class="badge badge-pill mt-1 badge-danger">2</span>
-                        </a>
-                    </li>
-                    <li id="pages" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"><a href="#" class="row">
-                            <div class="col-2"><img src="images/pages.PNG" height="20px"></div>
-                            <div class="col-8">Pages</div>
-                            <i class="fa fa-angle-right pt-1"></i>
-                        </a>
-                    </li>
-                    <ul id="collapsePages" class="collapse list-unstyled sub-menu" aria-labelledby="pages" data-parent="#accordion">
-                        <li><a href="#" class="text-muted">Login</a></li>
-                        <li><a href="#" class="text-muted">Register</a></li>
-                        <li><a href="#" class="text-muted">Recover Pssword</a></li>
-                        <li><a href="#" class="text-muted">Lock Screen</a></li>
-                        <li><a href="#" class="text-muted">Blank Page</a></li>
-                        <li><a href="#" class="text-muted">Error 404</a></li>
-                        <li><a href="#" class="text-muted">Error 505</a></li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="col-10" id="main">
-            <div id="header" class="row">
-                <div class="col-3 m-3 pt-2">
-                    <input type="text" class=" px-3 search" placeholder="Search...">
-                    <!--<i class="fas fa-search p-2 search"></i>-->
-                </div>
-                <div class="col-8 ">
-                    <ul class="list-unstyled d-flex flex-row">
-                        <li class="py-2 mt-1 dropdown">
-                            <a href="#" class="nav-link text-dark" id="language" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="text-white px-3">English</span>
-                                <img src="images/flag.PNG" height="20px">
+<html>
+    <head>
+        <title>Blog_site</title>
+        <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="CssFile.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+          <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <header class="py-1">
+                <div class="row align-item-center justify-content-between mx-2">
+                    <div class="col-4 pt-1 mt-3 justify-content-start">
+                        <a href="#" class="text-muted">Subscribe</span>
+                    </div>
+                    <div class="col-4 text-center mt-1">
+                        <strong><span class="text-dark" style="font-size: 30" id="Large-text">Large</span></strong>
+                    </div>
+                    <div class="col-4 mt-2 d-flex justify-content-end mb-3">
+                        <div class="align-item-center">    
+                            <a class="text-muted" href="#">
+                                <i class="fas fa-search mt-3 px-3"></i>
                             </a>
-                            <div class="dropdown-menu float-right" aria-labelledby="language">
-                                <a class="dropdown-item" href="#">Italian
-                                    <img src="images/flag.png" class="float-right" height="20px">
-                                </a>
-                                <a class="dropdown-item" href="#">French
-                                    <img src="images/flag.png" class="float-right" height="20px">
-                                </a>
-                                <a class="dropdown-item" href="#">Spanish
-                                    <img src="images/flag.png" class="float-right" height="20px">
-                                </a>
-                                <a class="dropdown-item" href="#">Russian
-                                    <img src="images/flag.png" class="float-right" height="20px">
-                                </a>
-                            </div>
-                        </li>
-                        <li class="py-2 mt-1 dropdown">
-                            <a href="#" class="nav-link text-dark" id="messages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                <i class="far fa-envelope text-white fa-lg"></i>
-                                <span class="badge  badge-danger headerBadge">5</span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="messages">
-                                <p class="dropdown-item bg-light" href="#">
-                                    <strong>Messages</strong>
-                                    <span class="badge  badge-danger float-right">745</span>
-                                </p>
-                                <a class="dropdown-item d-flex flex-row" href="#">
-                                    <img src="images/person.jpg" class="rounded-circle pr-2" height="40px">
-                                    <div>
-                                        <span>Charles M. Jones</span>
-                                        <p><small>Dummy text of printing.</small></p>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex flex-row" href="#">
-                                    <img src="images/person.jpg" class="rounded-circle pr-2" height="40px">
-                                    <div>
-                                        <span>Thomas J. Mimms</span>
-                                        <p><small>You have 87 unread messages.</small></p>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex flex-row" href="#">
-                                    <img src="images/person.jpg" class="rounded-circle pr-2" height="40px">
-                                    <div>
-                                        <span>Luis M. Konrad</span>
-                                        <p><small>It is a long established fact that.</small></p>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    View More
-                                </a>
-                            </div>
-                        </li>
-                        <li class="py-2 mt-1 dropdown">
-                            <a href="#" class="nav-link text-dark" id="notifications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="far fa-bell text-white fa-lg"></i>
-                                <span class="badge  badge-success headerBadge">23</span>
-                            </a>
-                            <div class="dropdown-menu " aria-labelledby="notifications">
-                                <p class="dropdown-item bg-light" href="#">
-                                    <strong>Notification</strong>
-                                    <span class="badge  badge-danger float-right">87</span>
-                                </p>
-                                <a class="dropdown-item d-flex flex-row" href="#">
-                                    <img src="images/order.PNG" class="rounded-circle pr-2" height="40px">
-                                    <div>
-                                        <span>Your order is placed</span>
-                                        <p><small>Dummy text of printing.</small></p>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex flex-row" href="#">
-                                    <img src="images/message.PNG" class="rounded-circle pr-2" height="40px">
-                                    <div>
-                                        <span>New message recieved</span>
-                                        <p><small>You have 87 unread messages.</small></p>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex flex-row" href="#">
-                                    <img src="images/shipped.PNG" class="rounded-circle pr-2" height="40px">
-                                    <div>
-                                        <span>Your item is shipped</span>
-                                        <p><small>It is a long established fact that.</small></p>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="#">View More</a>
-                            </div>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link text-dark" id="profile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="images/person.jpg" height="50px" class="rounded-circle">
-                            </a>
-                            <div class="dropdown-menu " aria-labelledby="profile">
-                                <p class="dropdown-item bg-light" href="#">
-                                    <strong>Welcome</strong>
-                                </p>
-                                <a class="dropdown-item d-flex flex-row" href="#">
-                                    <i class="fas fa-md pr-3 fa-user-circle pt-2 text-muted"></i>
-                                    <span class="pb-1"> Profile</span>
-                                </a>
-                                <a class="dropdown-item d-flex flex-row" href="#">
-                                    <i class="fas fa-wallet fa-md pr-3 pt-2 text-muted"></i>
-                                    <span class="pb-1"> My Wallet</span>
-                                </a>
-                                <a class="dropdown-item d-flex flex-row" href="#">
-                                    <i class="fas fa-cog fa-md pr-3 pt-2 text-muted"></i>
-                                    <span class="pb-1">Settings</span>
-                                    <span class="badge ml-4 mt-2 badge-success">5</span>
-                                </a>
-                                <a class="dropdown-item d-flex flex-row border-bottom" href="#">
-                                    <i class="fas fa-unlock-alt fa-md pr-3 pt-2 text-muted"></i>
-                                    <span class="pb-1">Lock Screen</span>
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-sign-out-alt fa-md pr-3 pt-2 text-muted"></i>
-                                    <span class="pb-1">Logout</span>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-10 p-3">
-                    <h4>Dashboard</h4>
-                </div>
-                <div class="col-2 py-3 medium">Annex/Dashboard</div>
-            </div>
-            <div class="row">
-                <div class="card ml-3">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="ml-3 my-3 mr-3"><img src="images/visits.PNG" class="rounded-circle" height="60px">
-                            </div>
-                        </div>
-                        <div class="col-5 my-2 pt-3 pl-4 text-center">
-                            <div class="card-block">
-                                <div class="card-title">
-                                    <h4>$18090 </h4>
-                                    <p>Visits Today</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4 py-4 text-danger text-center">
-                            <i class="fas fa-arrow-down pr-4"></i>
-                            <p class="pr-4">5.26%</p>
+                            <a class="btn btn-sm btn-outline-secondary mt-2" href="#">Sign up</a>
                         </div>
                     </div>
                 </div>
-                <div class="card ml-3">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="ml-3 my-3 mr-3"><img src="images/users.PNG" class="rounded-circle" height="60px">
-                            </div>
-                        </div>
-                        <div class="col-5 my-2 pt-3 pl-4 text-center">
-                            <div class="card-block">
-                                <div class="card-title">
-                                    <h4>562</h4>
-                                    <p>New Users</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4 py-4 text-success text-center">
-                            <i class="fas fa-arrow-up pr-4"></i>
-                            <p class="pr-4">8.68%</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card ml-3">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="ml-3 my-3 mr-3"><img src="images/orders.PNG" class="rounded-circle" height="60px">
-                            </div>
-                        </div>
-                        <div class="col-5 my-2 pt-3 pl-4 text-center">
-                            <div class="card-block">
-                                <div class="card-title">
-                                    <h4>7514 </h4>
-                                    <p>New Orders</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4 py-4 text-danger text-center">
-                            <i class="fas fa-arrow-down pr-4"></i>
-                            <p class="pr-4">2.35%</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card ml-3">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="ml-3 my-3 mr-3"><img src="images/sales.PNG" class="rounded-circle" height="60px">
-                            </div>
-                        </div>
-                        <div class="col-5 my-2 pt-3 pl-4 text-center">
-                            <div class="card-block">
-                                <div class="card-title">
-                                    <h4>$32874</h4>
-                                    <p>Total Sales</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4 py-4 text-success text-center">
-                            <i class="fas fa-arrow-up pr-4"></i>
-                            <p class="pr-4">2.35%</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col mt-4 mr-3">
-                    <img id="graph" src="images/graph.PNG" class="pl-2" style="height: 455px">
-                </div>
-                <div class="col ml-4 mt-4 mx-1" style="width: 100%">
-                    <div class="card">
-                        <div class="card-body ml-2">
-                            <a href="#" class="btn btn-primary btn-sm float-right">More Info</a>
-                            <h5 class="header-title mt-0 pb-3">Revenue By Country</h5>
-                            <ul class="list-unstyled list-inline text-center">
-                                <li class="list-inline-item">
-                                    <p><i class="mdi mdi-checkbox-blank-circle text-primary mr-2"></i>Canada</p>
-                                </li>
-                                <li class="list-inline-item">
-                                    <p><i class="mdi mdi-checkbox-blank-circle text-info mr-2"></i>USA</p>
-                                </li>
-                                <li class="list-inline-item">
-                                    <p><i class="mdi mdi-checkbox-blank-circle text-greylight mr-2"></i>London</p>
-                                </li>
-                            </ul>
-                            <img src="images/pie-chart.PNG" height="310px" class="rounded-circle">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </header>
             
-            <div class="row mt-3">
-                <div class="col-md-12 col-lg-6 col-xl-4">
-                    <div class="card mb-4" id="twitter">
-                        <div class="card-body">
-                            <div class="row d-flex justify-content-center text-center">
-                                <div class="col-sm-12">
-                                    <i class="fab fa-twitter  fa-3x text-white pt-3"></i>
-                                </div>
-                                <div class="col-6 text-white">
-                                    <h2>54k</h2>
-                                    <p class="">Followers</p>
-                                </div>
-                                <div class="col-6 text-white">
-                                    <h2>44k</h2>
-                                    <p class="">Tweets</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="py-1 mb-2 mx-3 border-top">
+                <nav class="nav flex justify-content-between">
+                    <a class="p-2 text-muted" href="#">World</a>
+                    <a class="p-2 text-muted" href="#">U.S.</a>
+                    <a class="p-2 text-muted" href="#">Technology</a>
+                    <a class="p-2 text-muted" href="#">Design</a>
+                    <a class="p-2 text-muted" href="#">Culture</a>
+                    <a class="p-2 text-muted" href="#">Buisness</a>
+                    <a class="p-2 text-muted" href="#">Politics</a>
+                    <a class="p-2 text-muted" href="#">Opinion</a>
+                    <a class="p-2 text-muted" href="#">Science</a>
+                    <a class="p-2 text-muted" href="#">Health</a>
+                    <a class="p-2 text-muted" href="#">Style</a>
+                    <a class="p-2 text-muted" href="#">Travel</a>
+                </nav>
+            </div>
 
-                    <div class="card pt-2 purple">
+            <div class="p-4 mt-2 mb-5">
+                <div class="col-md-12 rounded text-white bg-dark">
+                    <div class="col-md-6">
+                        <h1 class="display-4 font-italic large-font">Title of a longer featured blog post</h1>
+                        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+                        <p class="lead mb-0"><a class="text-white font-weight-bold" href="#">Continue...</a></p>
+                    </div>
+                </div>
+            <div>
+
+            <div class="row pt-4 md-10">
+                <div class="col-6">
+                    <div class="card flex-row shadow-sm h-250">    
                         <div class="card-body">
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-lg-12 carousel-icon text-center">
-                                    <i class="fab fa-facebook-f fa-3x py-3 text-white "></i>
-                                </div>
-                                <div class="col-sm-10 mx-auto text-white text-center">
-                                    <p>Lorem Ipsum is simply dummy text of the <mark> FACEBOOK </mark> and typesetting industry.</p>
-                                </div>
-                            </div>
+                            <strong class="text-primary">World</strong>
+                            <h2>
+                                <a class="text-dark" href="#">Featured post</h2>
+                            </a>
+                            <span class="text-muted">Nov 12</span>
+                            <p class="text-dark">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#">Continue reading</h3>
                         </div>
+                        <img class="card-img-right flex-auto d-lg-block" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20250%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1662f4f11cd%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1662f4f11cd%22%3E%3Crect%20width%3D%22200%22%20height%3D%22250%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2256.203125%22%20y%3D%22131%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-6 col-xl-4">
-                    <div class="card bg-white">
-                        <div class="card-body new-user">
-                            <div class="row text-center">
-                                <div class="col-6">
-                                    <h5><i class="mdi mdi-database mr-2 text-primary font-20"></i> 5 TB</h5>
-                                    <h6 class="text-lightdark">Bandwidth usage</h6>
-                                    <span class="text-muted"> <small>June 2018</small></span>
-                                </div>
-                                <div class="col-6">
-                                    <h5><i class="mdi mdi-download mr-2 text-success font-20"></i>5412</h5>
-                                    <h6 class="text-lightdark">Download count</h6>
-                                    <span class="text-muted"><small>June 2018</small></span>
-                                </div>
-                            </div>
-                            <div>
-                                <img src="images/morris-chart.PNG" height="300px">
-                            </div>
+
+                <div class="col-6">
+                    <div class="card flex-row shadow-sm h-250">    
+                        <div class="card-body">
+                            <strong class="text-success">Design</strong>
+                            <h2>
+                                <a class="text-dark" href="#">Post title</h2>
+                            </a>
+                            <span class="text-muted">Nov 11</span>
+                            <p class="text-dark">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#">Continue reading</h3>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-12 col-lg-12 col-xl-4 pr-4">
-                    <div class="card bg-white m-b-30">
-                        <img src="images/polar-bear.PNG" alt="" class="img-fluid">  
-                        <div class="card-body purple">
-                            <div class="row">
-                                <div class="col-6  align-self-center">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-sm-6 text-center">
-                                            <img src="images/cloud.PNG" class="pb-3">
-                                            <h6 class="text-white">SUNDAY <span>25<sup>th</sup></span></h6>
-                                        </div>
-                                        <div class="col-lg-6 col-sm-6 text-center align-self-center">
-                                            <h5 class="mt-0 text-white"><b>32°</b></h5>
-                                            <p class="text-white  font-12">Partly cloudy</p>
-                                            <p class="text-white font-12">15km/h - 37%</p>
-                                        </div>
-                                    </div><!-- End row -->
-                                </div>
-                                <div class="col-6 align-self-center">
-                                    <div class="row">
-                                        <div class="col-6 text-center">
-                                            <h6 class="text-white mt-0 font-14">MON</h6>
-                                            <img src="images/rain.PNG">
-                                            <h6 class="text-white font-14">38°<i class="wi-degrees"></i></h6>
-                                        </div>
-                                        <div class="col-6 text-center">
-                                            <h6 class="text-white mt-0 font-14">TUE</h6>
-                                            <img src="images/rain-2.PNG">
-                                            <h6 class="text-white font-14">32°<i class="wi-degrees"></i></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <img class="card-img-right flex-auto d-lg-block" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20250%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1662f4f11cd%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1662f4f11cd%22%3E%3Crect%20width%3D%22200%22%20height%3D%22250%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2256.203125%22%20y%3D%22131%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-8 pt-5">
-                    <div class="card bg-white">
-                        <div class="card-body">
-                            <h5 class="header-title mb-4">Members Profiles</h5>
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th class="border-top-0" style="width:60px;">Member</th>
-                                            <th class="border-top-0">Name</th>
-                                            <th class="border-top-0">Country</th>
-                                            <th class="border-top-0">Earnings</th>
-                                            <th class="border-top-0">Sales</th>
-                                            <th class="border-top-0">Reviews</th>
-                                            <th class="border-top-0">Progress</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img class="rounded-circle" src="images/person.jpg" alt="user" width="40"> </td>
-                                            <td>
-                                                <a href="#">Ruby T. Curd</a>
-                                            </td>
-                                            <td>
-                                                <img src="images/flag.png" alt="" style="width:30px">
-                                            </td>
-                                            <td>$100</td>
-                                            <td>10</td>
-                                            <td>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star-half text-warning"></i>
-                                                <i class="mdi mdi-star-outline text-warning"></i>
-                                            </td>
-                                            <td>
-                                                <div class="progress" style="height:8px;">
-                                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100" style="width: 94%;"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="rounded-circle" src="images/person.jpg" alt="user" width="40"> </td>
-                                            <td>
-                                                <a href="#">William A. Johnson</a>
-                                            </td>
-                                            <td>
-                                                <img src="images/flag.png" alt="" style="width:30px">
-                                            </td>
-                                            <td>$490</td>
-                                            <td>24</td>
-                                            <td>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star-half text-warning"></i>
-                                                <i class="mdi mdi-star-outline text-warning"></i>
-                                            </td>
-                                            <td>
-                                                <div class="progress" style="height:8px;">
-                                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" style="width: 38%;"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="rounded-circle" src="images/person.jpg" alt="user" width="40"> </td>
-                                            <td>
-                                                <a href="#">Bobby M. Gray</a>
-                                            </td>
-                                            <td>
-                                                <img src="images/flag.png" alt="" style="width:30px">
-                                            </td>
-                                            <td>$380</td>
-                                            <td>19</td>
-                                            <td>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star-half text-warning"></i>
-                                                <i class="mdi mdi-star-outline text-warning"></i>
-                                            </td>
-                                            <td>
-                                                <div class="progress" style="height:8px;">
-                                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%;"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="rounded-circle" src="images/person.jpg" alt="user" width="40"> </td>
-                                            <td>
-                                                <a href="#">Robert N. Carlile</a>
-                                            </td>
-                                            <td>
-                                                <img src="images/flag.png" alt="" style="width:30px">
-                                            </td>
-                                            <td>$450</td>
-                                            <td>30</td>
-                                            <td>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star-half text-warning"></i>
-                                                <i class="mdi mdi-star-outline text-warning"></i>
-                                            </td>
-                                            <td>
-                                                <div class="progress" style="height:8px;">
-                                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%;"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="rounded-circle" src="images/person.jpg" alt="user" width="40"> </td>
-                                            <td>
-                                                <a href="#">Ruby T. Curd</a>
-                                            </td>
-                                            <td>
-                                                <img src="images/flag.png" alt="" style="width:30px">
-                                            </td>
-                                            <td>$500</td>
-                                            <td>40</td>
-                                            <td>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star-half text-warning"></i>
-                                                <i class="mdi mdi-star-outline text-warning"></i>
-                                            </td>
-                                            <td>
-                                                <div class="progress" style="height:8px;">
-                                                    <div class="progress-bar l-blue" role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100" style="width: 17%;"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+            <main role="main" class="container">
+               <div class="row mt-4">
+                    <div class="col-md-8">
+                            <div class="py-3 font-italic">
+                                <div class="border-bottom">
+                                    <strong class="text-dark" style="font-size: 30">From the Firehose</strong>
+                                </div>
+                                <div class="pt-4">
+                                    <h2 class="text-dark">Sample blog post</h2>
+                                    <span class="text-muted">January 1, 2014 by </span><span>Mark</span>
+                                    <p class="text-dark">This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+                                    <hr>
+                                
+                                    <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                                    <p> blandit tempus porttitor. <span>Nullam quis risus eget urna mollis</span> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.<p>
+                                    <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                                    <h1>Heading</h1>
+                                    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                    
+                                    <h2>Sub-heading</h2>
+                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                    <pre><p class="text-white">Example code block</p></pre>
+                                    <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+                                    
+                                    <h2>Sub-heading</h2>
+                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                                    <ul>
+                                        <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                                        <li>Donec id elit non mi porta gravida at eget metus.</li>
+                                        <li>Nulla vitae elit libero, a pharetra augue.</li>
+                                    </ul>
+                                    <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+                                    <ol>
+                                        <li>Vestibulum id ligula porta felis euismod semper.</li>
+                                        <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                                        <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+                                    </ol>
+                                    <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+                                </div>
+        
+                                <div>
+                                    <h1>Another blog post</h1>
+                                    <p>December 23, 2013 by <a href="#">Jacob</a></p>
+                                    <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                                    <p>Curabitur blandit tempus porttitor.   <span>Nullam quis risus eget urna mollis</span> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.<p>
+                                    <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                                    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                    
+                                    <h1>New feature</h1>
+                                    <p>December 14, 2013 by <a href="#">Chris</a></p>
+                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                                    <ul>
+                                        <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                                        <li>Donec id elit non mi porta gravida at eget metus.</li>
+                                        <li>Nulla vitae elit libero, a pharetra augue.</li>
+                                    </ul>
+                                    <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                                    <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+                                </div>
+                                <nav>
+                                    <button href="#" class="btn btn-outline-secondary">Older</button>
+                                    <button href="#" class="btn btn-outline-secondary disabled">Newer</button>
+                                </nav>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-12 col-lg-12 col-xl-4 mt-5">
-                    <div class="card bg-white m-b-30">
-                        <div class="card-body">
-                            <h5 class="header-title mt-0 mb-4">New Users</h5>
-                            <ul class="list-unstyled mb-0 pr-3" style="overflow: hidden; outline: none;">
-                                <li class="p-3">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <a href="#">
-                                                <img class="rounded-circle" height="50px" src="images/person.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="col-8">
-                                            <p class="media-heading mb-0">Ruby T. Curd </p>
+        
+                       </div>
+                       <aside class="col-md-4">
+                            <div class="p-3 rounded bg-light">
+                                <h2 class="font-italic">About</h2>
+                                <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            </div>
+        
+                            <div class="p-3">
+                                <h2 class="font-italic">Archives</h2>
+                                <ol class="list-unstyled">
+                                    <li><a href="#">March 2014</a></li>
+                                    <li><a href="#">February 2014</a></li>
+                                    <li><a href="#">January 2014</a></li>
+                                    <li><a href="#">December 2013</a></li>
+                                    <li><a href="#">November 2013</a></li>
+                                    <li><a href="#">October 2013</a></li>
+                                    <li><a href="#">September 2013</a></li>
+                                    <li><a href="#">August 2013</a></li>
+                                    <li><a href="#">July 2013</a></li>
+                                    <li><a href="#">June 2013</a></li>
+                                    <li><a href="#">May 2013</a></li>
+                                    <li><a href="#">April 2013</a></li>
+                                </ol>
+                            </div>
+        
+                            <div class="p-3">
+                                <h2 class="font-italic">Elsewhere</h2>
+                                <ol class="list-unstyled">
+                                    <li><a href="#">Github</a></li>
+                                    <li><a href="#">Twitter</a></li>
+                                    <li><a href="#">Facebook</a></li>
+                                </ol>
+                            </div>
+                        </aside>
+               </div>
+            </main>
+           
 
-                                            <small class="text-muted">Newyork</small>
-                                        </div>
-                                        <div class="col-2">
-                                            <i class="fa fa-circle text-success mr-1 text-right"></i>
-                                            <small class=" text-muted">Now</small>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-3">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <a href="#">
-                                                <img class="rounded-circle" height="50px" src="images/person.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="col-8">
-                                            <p class="media-heading mb-0">William A. Johnson </p>
-                                            <small class="text-muted">California</small>
-                                        </div>
-                                        <div class="col-2">
-                                            <i class="fa fa-circle text-success mr-1 text-right"></i>
-                                            <small class=" text-muted">Now</small>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-3">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <a href="#">
-                                                <img class="rounded-circle" height="50px" src="images/person.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="col-6">
-                                            <p class="media-heading mb-0">Robert N. Carlile</p>
-                                            <small class="text-muted">India</small>
-                                        </div>
-                                        <div class="col-4">
-                                            <i class="fa fa-circle text-danger mr-1 float-right pr-2"></i><br>
-                                            <small class=" text-muted float-right">10 min ago</small>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-3">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <a href="#">
-                                                <img class="rounded-circle" height="50px" src="images/person.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="col-8">
-                                            <p class="media-heading mb-0">Bobby M. Gray </p>
-
-                                            <small class="text-muted">Australia</small>
-                                        </div>
-                                        <div class="col-2">
-                                            <i class="fa fa-circle text-success mr-1 text-right"></i>
-                                            <small class="text-muted">Now</small>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-3">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <a href="#">
-                                                <img class="rounded-circle" height="50px" src="images/person.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="col-6">
-                                            <p class="media-heading mb-0">Ruby T. Curd</p>
-                                            <small class="text-muted">New Zealand</small>
-                                        </div>
-                                        <div class="col-4">
-                                            <i class="fa fa-circle text-danger mr-1 float-right pr-2"></i><br>
-                                            <small class=" text-muted float-right">36 min ago</small>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="p-3">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <a href="#">
-                                                <img class="rounded-circle" height="50px" src="images/person.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="col-8">
-                                            <p class="media-heading mb-0">Robert N. Carlile</p>
-                                            <small class="text-muted">India</small>
-                                        </div>
-                                        <div class="col-2">
-                                            <i class="fa fa-circle text-success mr-1 text-right"></i>
-                                            <small class=" text-muted">Now</small>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-3">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <a href="#">
-                                                <img class="rounded-circle" height="50px" src="images/person.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="col-6">
-                                            <p class="media-heading mb-0">Bobby M. Gray</p>
-
-                                            <small class="text-muted">Australia</small>
-                                        </div>
-                                        <div class="col-4">
-                                            <i class="fa fa-circle text-danger mr-1 float-right pr-2"></i><br>
-                                            <small class=" text-muted float-right">58 min ago</small>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <footer class="mt-4 p-4" style="background-color: lightgray">           
+            <center>
+                <p>Blog template built for <a href="#">Bootstrap</a> by <a href="#">@mdo</a>.</p>
+                <p><a href="#">Back to top</a></p>
+            </center>
+        </footer>
+    </body>
+</html>
