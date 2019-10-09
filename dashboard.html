@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <title>BootStrap Assignment</title>
-
         <!-- Bootstrap core CSS -->
         <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="CssFile.css">
@@ -15,15 +14,15 @@
     </head>
     <body>
         <div class="row">
-            <div class="col-2 p-3 " id="sidebar">
-                <div class="text-center py-3">
-                    <h4><strong>ANNEX</strong></h4>
+            <div class="col-2 sidebar pr-3">
+                <div class="my-4 ml-5 set-annex">
+                    <i class="mdi mdi-assistant"></i><strong style="font-size: 20px ">ANNEX</strong>
                 </div>
-                <div class="p-3 ml-3 dashboard" id="accordion">
-                    <p class="text-sm text-muted mb-2">Main</p>
-                    <ul class="list-unstyled ">
-                        <li>
-                            <a href="#" class="row">
+                <div class="p-3 ml-3 dashboard set-fixed-sidebar" id="accordion">
+                    <p class="text-sm text-muted mb-2" style="font-size: 14px">Main</p>
+                    <ul class="list-unstyled">
+                        <li  class="Dashboard">
+                            <a href="#" class="row dash">
                                 <div class="col-2"><img src="images/dashboard.PNG" height="20px"></div>
                                 <div class="col-8">Dashboard</div>
                                 <span class="badge badge-pill mt-1 badge-primary">7</span>
@@ -31,10 +30,13 @@
                         </li>
                         <li data-toggle="collapse" data-target="#collapseAdvancedUI">
                             <a href="#" class="row">
-                                <div class="col-2"><img src="images/advanced-ui.PNG" height="20px"></div>
+                                <div class="col-2">
+                                    <img src="images/advanced-ui.PNG" height="20px">
+                                </div>
                                 <div class="col-8">Advanced UI</div>
                                 <i class="fa fa-angle-right pt-1"></i>
-                            </a></li>
+                            </a>
+                        </li>
                         <ul id="collapseAdvancedUI" class="collapse list-unstyled sub-menu">
                             <li><a href="#" class="text-muted">Highlight</a></li>
                             <li><a href="#" class="text-muted">Rating</a></li>
@@ -43,16 +45,21 @@
                         </ul>
                         <li>
                             <a href="#" class="row">
-                                <div class="col-2"><img src="images/calender.PNG" height="20px"></div>
+                                <div class="col-2">
+                                    <img src="images/calender.PNG" height="20px">
+                                </div>
                                 <div class="col-8">Calender</div>
                             </a>
                         </li>
                     </ul>
-                    <p class="text-sm text-muted mb-2">Components</p>
+
+                    <p class="text-sm text-muted mb-2" style="font-size: 14px">Components</p>
                     <ul class="list-unstyled ">
                         <li id="uiElements" data-toggle="collapse" data-target="#collapseUIElements">
                             <a href="#" class="row">
-                                <div class="col-2"><img src="images/ui-elements.PNG" height="20px"></div>
+                                <div class="col-2">
+                                    <img src="images/ui-elements.PNG" height="20px">
+                                </div>
                                 <div class="col-8">UI Elements</div>
                                 <i class="fa fa-angle-right pt-1"></i>
                             </a>
@@ -71,7 +78,9 @@
                             <li><a href="#" class="text-muted">Paginations</a></li>
                         </ul>
                         <li><a href="#" class="row">
-                                <div class="col-2"><img src="images/forms.PNG" height="20px"></div>
+                                <div class="col-2">
+                                    <img src="images/forms.PNG" height="20px">
+                                </div>
                                 <div class="col-8">Forms</div>
                                 <span class="badge badge-pill mt-1 badge-primary">8</span>
                             </a>
@@ -79,7 +88,9 @@
 
                         <li id="charts" data-toggle="collapse" data-target="#collapseCharts">
                             <a href="#" class="row">
-                                <div class="col-2"><img src="images/charts.PNG" height="20px"></div>
+                                <div class="col-2">
+                                    <img src="images/charts.PNG" height="20px">
+                                </div>
                                 <div class="col-8">Charts</div>
                                 <i class="fa fa-angle-right pt-1"></i>
                             </a>
@@ -111,7 +122,9 @@
                         </ul>
                         <li id="tables" data-toggle="collapse" data-target="#collapseTables">
                             <a href="#" class="row">
-                                <div class="col-2"><img src="images/tables.PNG" height="20px"></div>
+                                <div class="col-2">
+                                    <img src="images/tables.PNG" height="20px">
+                                </div>
                                 <div class="col-8">Tables</div>
                                 <i class="fa fa-angle-right pt-1"></i>
                             </a>
@@ -123,16 +136,21 @@
                             <li><a href="#" class="text-muted">Editable Table</a></li>
                         </ul>
                     </ul>
-                    <p class="text-sm text-muted mb-2">Extra</p>
+                    <p class="text-sm text-muted mb-2" style="font-size: 14px">Extra</p>
                     <ul class="list-unstyled ">
                         <li><a href="#" class="row">
-                                <div class="col-2"><img src="images/maps.PNG" height="20px"></div>
+                                <div class="col-2">
+                                    <img src="images/maps.PNG" height="20px">
+                                </div>
                                 <div class="col-8">Maps</div>
                                 <span class="badge badge-pill mt-1 badge-danger">2</span>
                             </a>
                         </li>
-                        <li id="pages" data-toggle="collapse" data-target="#collapsePages"><a href="#" class="row">
-                                <div class="col-2"><img src="images/pages.PNG" height="20px"></div>
+                        <li id="pages" data-toggle="collapse" data-target="#collapsePages">
+                            <a href="#" class="row">
+                                <div class="col-2">
+                                    <img src="images/pages.PNG" height="20px">
+                                </div>
                                 <div class="col-8">Pages</div>
                                 <i class="fa fa-angle-right pt-1"></i>
                             </a>
@@ -149,12 +167,16 @@
                     </ul>
                 </div>
             </div>
+
             <div class="col-10" id="main">
-                <div id="header" class="row">
+                <div id="header" class="row"> 
                     <div class="col-3 m-3 pt-2">
                         <input type="text" class=" px-3 search" placeholder="Search...">
-                        <i class="fas fa-search p-2 search"></i>
+                        <a class="search-bar">
+                            <i class="fas fa-search"></i>
+                        </a>
                     </div>
+                    
                     <div class="col-8 ">
                         <ul class="list-unstyled d-flex">
                             <li class="py-2 mt-1 dropdown">
@@ -218,7 +240,7 @@
                                     <i class="far fa-bell text-white fa-lg"></i>
                                     <span class="badge  badge-success headerBadge">23</span>
                                 </a>
-                                <div class="dropdown-menu " aria-labelledby="notifications">
+                                <div class="dropdown-menu" aria-labelledby="notifications">
                                     <p class="dropdown-item bg-light" href="#">
                                         <strong>Notification</strong>
                                         <span class="badge  badge-danger float-right">87</span>
@@ -249,7 +271,7 @@
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="nav-link text-dark" data-toggle="dropdown">
-                                    <img src="images/person.jpg" height="50px" class="rounded-circle">
+                                    <img src="images/person.jpg" height="40px" class="rounded-circle">
                                 </a>
                                 <div class="dropdown-menu">
                                     <p class="dropdown-item bg-light" href="#">
@@ -291,7 +313,8 @@
                     <div class="card ml-3">
                         <div class="row">
                             <div class="col-3">
-                                <div class="ml-3 my-3 mr-3"><img src="images/visits.PNG" class="rounded-circle" height="60px">
+                                <div class="ml-3 my-3 mr-3">
+                                    <img src="images/visits.PNG" class="rounded-circle" height="60px">
                                 </div>
                             </div>
                             <div class="col-5 my-2 pt-3 pl-4 text-center">
@@ -353,7 +376,8 @@
                     <div class="card ml-3">
                         <div class="row">
                             <div class="col-3">
-                                <div class="ml-3 my-3 mr-3"><img src="images/sales.PNG" class="rounded-circle" height="60px">
+                                <div class="ml-3 my-3 mr-3">
+                                    <img src="images/sales.PNG" class="rounded-circle" height="60px">
                                 </div>
                             </div>
                             <div class="col-5 my-2 pt-3 pl-4 text-center">
@@ -636,7 +660,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-12 col-lg-12 col-xl-4 mt-5">
+                    <div class="col-md-12 col-lg-12 col-xl-4 mt-5 set-div-scrollable">
                         <div class="card bg-white m-b-30">
                             <div class="card-body">
                                 <h5 class="header-title mt-0 mb-4">New Users</h5>
